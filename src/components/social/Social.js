@@ -1,9 +1,9 @@
 import React from "react";
 
 import css from './Social.module.css'
-import vk from "../../public/img/vk.png";
-import fb from "../../public/img/fb.png";
-import inst from "../../public/img/inst.png";
+import vk from "../../static/img/vk.png";
+import fb from "../../static/img/fb.png";
+import inst from "../../static/img/inst.png";
 
 const Social = () => {
     return (
