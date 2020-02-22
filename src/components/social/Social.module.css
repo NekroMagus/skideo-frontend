@@ -1,0 +1,10 @@
+.vk, .fb, .inst{
+    transition: 0.2s;
+    width: 25px;
+    height: 25px;
+}
+
+.vk:hover, .fb:hover, .inst:hover {
+    transition: 0.2s;
+    transform: scale(1.4);
+}

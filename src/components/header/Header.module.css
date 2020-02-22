@@ -1,3 +1,8 @@
-header {
+.bgOpacity {
     background-color: rgba(0, 0, 0, 0.5);
+}
+
+.title {
+    font-weight: bold;
+    font-size: 30px;
 }
