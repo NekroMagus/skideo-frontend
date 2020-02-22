@@ -1,7 +1,8 @@
-.vk, .fb, .inst{
+.vk, .fb, .inst {
     transition: 0.2s;
-    width: 25px;
-    height: 25px;
+    margin-top: 8px;
+    width: 1.8vw;
+    height: 1.8vw;
 }
 
 .vk:hover, .fb:hover, .inst:hover {
