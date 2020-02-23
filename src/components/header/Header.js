@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import css from './Header.module.css';
 import Social from "../social/Social";
+import MainLinks from "../mainLinks/MainLinks";
 
 
 class Header extends Component {
@@ -36,21 +37,8 @@ class Header extends Component {
                          ? css.bgNoOpacity : css.bgOpacity}`}>
                     <a className={`${css.title}`} href="/">Skideo</a>
                     <div className="collapse navbar-collapse justify-content-md-center" id="navbarCollapse">
-                        <ul className="navbar-nav">
-                            <li className={`nav-item active ${css.nav}`}>
-                                <a className="nav-link" href="#">Главная</a>
-                            </li>
-                            <li className={`nav-item active ${css.nav}`}>
-                                <a className="nav-link" href="#">Наши партнеры</a>
-                            </li>
-                            <li className={`nav-item active ${css.nav}`}>
-                                <a className="nav-link" href="#">Достижения</a>
-                            </li>
-                            <li className={`nav-item active ${css.nav}`}   >
-                                <a className="nav-link" href="#">Регистрация</a>
-                            </li>
-                            <Social/>
-                        </ul>
+                      <MainLinks/>
+                      <Social/>
                     </div>
                 </nav>
             </header>

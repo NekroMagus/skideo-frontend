@@ -1,0 +1,22 @@
+.nav, .nav:hover {
+    padding-right:20px;
+    font-size: 1.7vw;
+    transition: 0.2s;
+    color: white;
+    margin: auto auto;
+}
+
+.nav:hover {
+    transform: translate(0.0,10px) scale(1.2);
+}
+
+.navLink, .navLink:hover {
+    color: white;
+    text-decoration: none;
+    padding: 8px;
+}
+
+.barNav {
+    margin-top:10px;
+    display: inline-flex;
+}

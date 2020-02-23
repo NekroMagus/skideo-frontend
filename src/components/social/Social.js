@@ -8,15 +8,17 @@ import inst from "../../static/img/inst.png";
 const Social = () => {
     return (
         <>
-                <li className="nav-item">
-                    <a className="nav-link" href="#"><img className={css.vk} src={vk} alt="vk"/></a>
+            <ul className={css.inline}>
+                <li className={css.navItem}>
+                    <a className={css.navLink} href="/"><img className={css.vk} src={vk} alt="vk"/></a>
                 </li>
-                <li className="nav-item">
-                    <a className="nav-link" href="#"><img className={css.fb} src={fb} alt="fb"/></a>
+                <li className={css.navItem}>
+                    <a className={css.navLink} href="/"><img className={css.fb} src={fb} alt="fb"/></a>
                 </li>
-                <li className="nav-item">
-                    <a className="nav-link" href="#"><img className={css.inst} src={inst} alt="inst"/></a>
+                <li className={css.navItem}>
+                    <a className={css.navLink} href="/"><img className={css.inst} src={inst} alt="inst"/></a>
                 </li>
+            </ul>
         </>
     );
 };

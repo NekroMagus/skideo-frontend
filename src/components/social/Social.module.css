@@ -1,11 +1,23 @@
 .vk, .fb, .inst {
     transition: 0.2s;
-    margin-top: 8px;
+    padding-top: 0;
     width: 1.8vw;
     height: 1.8vw;
 }
 
 .vk:hover, .fb:hover, .inst:hover {
     transition: 0.2s;
-    transform: scale(1.4);
+    transform: scale(1.6);
+}
+
+.inline {
+    display: inline-flex;
+}
+
+.navLink {
+    padding: 8px 16px;
+}
+
+.navItem {
+    margin-top:20px;
 }

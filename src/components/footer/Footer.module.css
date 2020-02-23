@@ -1,0 +1,8 @@
+footer {
+    background-color: black;
+}
+
+.inline > ul > li > a{
+    clear: both;
+    display: inline-block;
+}
