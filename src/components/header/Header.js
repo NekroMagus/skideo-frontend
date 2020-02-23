@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import css from './Header.module.css';
 import Social from "../social/Social";
-import MainLinks from "../mainLinks/MainLinks";
+import Nav from "../nav/Nav";
 
 
 class Header extends Component {
@@ -37,7 +37,7 @@ class Header extends Component {
                          ? css.bgNoOpacity : css.bgOpacity}`}>
                     <a className={`${css.title}`} href="/">Skideo</a>
                     <div className="collapse navbar-collapse justify-content-md-center" id="navbarCollapse">
-                      <MainLinks/>
+                      <Nav/>
                       <Social/>
                     </div>
                 </nav>

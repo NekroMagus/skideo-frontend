@@ -1,8 +1,8 @@
 .vk, .fb, .inst {
     transition: 0.2s;
     padding-top: 0;
-    width: 1.8vw;
-    height: 1.8vw;
+    width: 2rem;
+    height: 2rem;
 }
 
 .vk:hover, .fb:hover, .inst:hover {
@@ -19,5 +19,5 @@
 }
 
 .navItem {
-    margin-top:20px;
+    margin-top: 10px;
 }

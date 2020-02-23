@@ -2,7 +2,30 @@ footer {
     background-color: black;
 }
 
-.inline > ul > li > a{
-    clear: both;
-    display: inline-block;
+.center {
+    text-align: center;
+}
+
+.animation {
+    height: 2rem;
+    width: 2rem;
+    margin-right: 20px;
+    transition: 0.2s;
+    transform: rotate(130deg);
+}
+
+.animation:hover {
+    margin-right: 10px;
+    transform: rotate(0deg);
+}
+
+.title, .title:hover, .title:active {
+    font-weight: bold;
+    font-size: 2rem;
+    text-decoration: none;
+    color: white;
+}
+
+.padding {
+    padding-top: 50px;
 }

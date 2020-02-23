@@ -1,7 +1,7 @@
 import React from "react";
-import css from "./MainLinks.module.css";
+import css from "./Nav.module.css";
 
-const MainLinks = () => {
+const Nav = () => {
     return (
         <ul className={css.barNav}>
             <li className={css.nav}>
@@ -20,4 +20,4 @@ const MainLinks = () => {
     );
 };
 
-export default MainLinks;
+export default Nav;

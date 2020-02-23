@@ -1,0 +1,14 @@
+.section > :first-child {
+    margin-top : 50px;
+}
+
+.img {
+    height: 250px;
+    width: 250px;
+}
+
+@media screen and (max-width: 768px){
+    .img {
+        width: 90%;
+    }
+}
