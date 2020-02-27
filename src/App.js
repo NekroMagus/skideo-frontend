@@ -1,21 +1,16 @@
 import React from 'react';
 import Header from "./components/header/Header";
-import Partners from "./components/landing/partners/Partners";
-import Skideo from "./components/landing/skideo/Skideo";
 import Footer from "./components/footer/Footer";
 import './bootstrap.css';
-import Dream from "./components/landing/dream/Dream";
+import {Route} from "react-router-dom";
+import Profile from "./pages/Profile";
+import Landing from "./pages/Landing";
 
 function App() {
     return (
         <>
-            <Header/>
-            <main>
-                <Skideo/>
-                <Partners/>
-                <Dream/>
-            </main>
-            <Footer/>
+            <Route path="/" exact render={props => <Landing/>}/>
+            <Route path="/profile" exact render={props => <Profile/>}/>
         </>
     );
 }
