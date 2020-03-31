@@ -29,8 +29,10 @@
     color: white;
 }
 
-.button {
+.button,
+.button:focus {
     font-weight: bold;
+    outline: none;
     color: white;
     background-color: #00BFFF;
     border-radius: 50px;
@@ -41,8 +43,10 @@
 
 .button:hover {
     box-shadow: inset 0 0 12px 1px #FFF;
+    outline: none;
 }
 
 .button:active {
     transform: scale(0.95);
+    outline: none;
 }

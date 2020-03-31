@@ -1,24 +1,34 @@
-import React from "react";
+import React, {Component} from "react";
 import css from "./Nav.module.css";
 import {NavLink} from "react-router-dom";
+import {connect} from "react-redux";
 
-const Nav = () => {
-    return (
-        <ul className={css.barNav}>
-            <li className={css.nav}>
-                <a className={css.navLink} href="/">Главная</a>
-            </li>
-            <li className={css.nav}>
-                <NavLink className={css.navLink} to="/profile">Наши партнеры</NavLink>
-            </li>
-            <li className={css.nav}>
-                <a className={css.navLink} href="/">Достижения</a>
-            </li>
-            <li className={css.nav}>
-                <a className={css.navLink} href="/">Регистрация</a>
-            </li>
-        </ul>
-    );
-};
+class Nav extends Component {
+    render() {
+        return (
+            <ul className={css.barNav}>
+                <li className={css.nav}>
+                    <NavLink className={css.navLink} to="/">Главная</NavLink>
+                </li>
+                <li className={css.nav}>
+                    <NavLink className={css.navLink} to="/profile">Наши партнеры</NavLink>
+                </li>
+                <li className={css.nav}>
+                    <NavLink className={css.navLink} to="/">Достижения</NavLink>
+                </li>
+                <li className={css.nav}>
+                    {this.props.isAuth
+                        ? <NavLink className={css.navLink} to="/">Выход</NavLink>
+                        : <NavLink className={css.navLink} to="/">Регистрация</NavLink>}
 
-export default Nav;
+                </li>
+            </ul>
+        );
+    }
+}
+
+const mapStateToProps = (state) => ({
+    isAuth: state.auth.isAuth
+});
+
+export default connect(mapStateToProps, {})(Nav);

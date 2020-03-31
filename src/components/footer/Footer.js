@@ -3,6 +3,7 @@ import Social from "../social/Social";
 import Nav from "../nav/Nav";
 import css from './Footer.module.css';
 import football from '../../static/img/kick-white.png';
+import {NavLink} from "react-router-dom";
 
 const Footer = () => {
     return (
@@ -10,7 +11,7 @@ const Footer = () => {
             <nav className={css.center}>
                 <div className={css.padding}>
                     <img className={css.animation} src={football} alt="Skideo kick"/>
-                    <a className={css.title} href="/">Skideo</a>
+                    <NavLink className={css.title} to="/">Skideo</NavLink>
                 </div>
                 <div>
                     <Nav/>

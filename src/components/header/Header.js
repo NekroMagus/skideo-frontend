@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import css from './Header.module.css';
 import Social from "../social/Social";
 import Nav from "../nav/Nav";
-
+import {NavLink} from "react-router-dom";
 
 class Header extends Component {
 
@@ -35,7 +35,7 @@ class Header extends Component {
                 <nav onScroll={this.onScroll}
                      className={`navbar navbar-expand-md navbar-dark fixed-top ${this.state.scroll
                          ? css.bgNoOpacity : css.bgOpacity}`}>
-                    <a className={`${css.title}`} href="/">Skideo</a>
+                    <NavLink className={`${css.title}`} to="/">Skideo</NavLink>
                     <div className="collapse navbar-collapse justify-content-md-center" id="navbarCollapse">
                       <Nav/>
                       <Social/>

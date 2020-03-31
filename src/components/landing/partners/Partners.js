@@ -20,7 +20,7 @@ const Partners = () => {
                     <div className="col-md-4 col-sm-6 col-12 alignCenter">
                         <img className={css.img} src={juventus} alt="Juventus"/>
                         <h3>Juventus</h3>
-                        <p>Хочешь попасть в академию Real Madrid?<br/>
+                        <p>Хочешь попасть в академию Juventus?<br/>
                             Тогда отправляй нам свои видео скиллы,и может именно ты станешь тем самым счастливчиком!</p>
                     </div>
                     <div className="col-md-4 col-sm-12 col-12 alignCenter">
