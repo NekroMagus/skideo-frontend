@@ -10,21 +10,21 @@ class ModalAuth extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            isAuth: true
+            isSetAuth: true
         }
     }
 
     onChangeAuth = () => {
         this.setState({
             ...this.state,
-            isAuth: true
+            isSetAuth: true
         })
     };
 
     onChangeRegistration = () => {
         this.setState({
             ...this.state,
-            isAuth: false
+            isSetAuth: false
         })
     };
 
@@ -41,6 +41,10 @@ class ModalAuth extends Component {
             return null;
         }
 
+        if (this.props.isAuth) {
+            return null;
+        }
+
         return (
             <div className={css.authModalWindow}>
                 <div className={css.modalInner}>
@@ -49,7 +53,7 @@ class ModalAuth extends Component {
                         <button onClick={this.onChangeRegistration} className={css.toggleButton}>Регистрация</button>
                     </div>
                     <div className={css.inputsContainer}>
-                        {this.state.isAuth
+                        {this.state.isSetAuth
                             ? <AuthForm onSubmit={this.onSubmitAuth}/>
                             : <RegistrationForm onSubmit={this.onSubmitRegistration}/>}
                         <button className={`${css.button} ${css.center}`}
@@ -62,6 +66,8 @@ class ModalAuth extends Component {
     }
 }
 
-const mapStateToProps = () =>({});
+const mapStateToProps = (state) =>({
+    isAuth: state.auth.isAuth
+});
 
 export default connect(mapStateToProps, {login, registration})(ModalAuth);

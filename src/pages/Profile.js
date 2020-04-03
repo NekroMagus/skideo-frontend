@@ -1,19 +1,21 @@
 import React, {Component} from "react";
-import Header from "../components/header/Header";
-import Footer from "../components/footer/Footer";
-import Dream from "../components/landing/dream/Dream";
+import Header from "../components/common/header/Header";
+import Footer from "../components/common/footer/Footer";
+import {compose} from "redux";
+import {withAuthRedirect} from "../hoc/withAuthRedirect";
+import ProfileInfo from "../components/profile/ProfileInfo";
 
 class Profile extends Component {
-render() {
-    return (
-      <>
-          <Header/>
-          <Dream/>
-          <Dream/>
-          <Footer/>
-      </>
-    );
-}
+    render() {
+        return (
+            <>
+                <Header/>
+                <ProfileInfo/>
+                <Footer/>
+            </>
+        );
+    }
 }
 
-export default Profile;
+
+export default compose(withAuthRedirect)(Profile);

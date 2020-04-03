@@ -1,16 +1,35 @@
-import React from 'react';
+import React, {Component} from 'react';
 import './bootstrap.css';
-import {Route} from "react-router-dom";
+import {Route, withRouter} from "react-router-dom";
 import Profile from "./pages/Profile";
 import Landing from "./pages/Landing";
+import {connect} from "react-redux";
+import {initializeApp} from "./store/reducers/appReducer";
 
-function App() {
-    return (
-        <>
-            <Route path="/" exact render={() => <Landing/>}/>
-            <Route path="/profile" exact render={() => <Profile/>}/>
-        </>
-    );
+class App extends Component {
+
+    componentDidMount() {
+        this.props.initializeApp();
+    }
+
+    render() {
+        if(!this.props.isInit) {
+            return <div>
+                WAIT MOMENT
+            </div>;
+        }
+
+        return (
+            <>
+                <Route path="/" exact render={() => <Landing/>}/>
+                <Route path="/profile" exact render={() => <Profile/>}/>
+            </>
+        );
+    }
 }
 
-export default App;
+const mapStateToProps = (state) => ({
+    isInit: state.app.isInit
+});
+
+export default withRouter(connect(mapStateToProps, {initializeApp})(App));

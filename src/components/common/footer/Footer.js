@@ -1,8 +1,8 @@
 import React from "react";
-import Social from "../social/Social";
+import Social from "../nav/social/Social";
 import Nav from "../nav/Nav";
 import css from './Footer.module.css';
-import football from '../../static/img/kick-white.png';
+import football from '../../../static/img/kick-white.png';
 import {NavLink} from "react-router-dom";
 
 const Footer = () => {

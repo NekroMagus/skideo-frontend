@@ -1,9 +1,9 @@
 import React from "react";
 
 import css from './Social.module.css'
-import vk from "../../static/img/vk.png";
-import fb from "../../static/img/fb.png";
-import inst from "../../static/img/inst.png";
+import vk from "../../../../static/img/vk.png";
+import fb from "../../../../static/img/fb.png";
+import inst from "../../../../static/img/inst.png";
 import {NavLink} from "react-router-dom";
 
 const Social = () => {

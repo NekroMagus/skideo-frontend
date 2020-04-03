@@ -1,0 +1,28 @@
+.underline {
+    border-bottom: 1px solid black;
+    margin-top: 20px;
+}
+
+.marginLeft {
+    margin-left:60%;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.about {
+    border: 5px solid purple;
+    border-radius: 50px;
+    color: purple;
+    font-weight: bold;
+    text-align: center;
+    font-size: 24px;
+}
+
+.editProfile {
+    padding: 5px;
+    margin-top:5px;
+}

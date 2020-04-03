@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import css from './Header.module.css';
-import Social from "../social/Social";
+import Social from "../nav/social/Social";
 import Nav from "../nav/Nav";
 import {NavLink} from "react-router-dom";
 
