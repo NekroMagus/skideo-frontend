@@ -16,4 +16,4 @@ const ProfileEdit = (props) => {
     );
 };
 
-export default connect(null,{setProfileData})(ProfileEdit);
+export default connect(null, {setProfileData})(ProfileEdit);

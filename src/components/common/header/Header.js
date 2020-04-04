@@ -37,8 +37,8 @@ class Header extends Component {
                          ? css.bgNoOpacity : css.bgOpacity}`}>
                     <NavLink className={`${css.title}`} to="/">Skideo</NavLink>
                     <div className="collapse navbar-collapse justify-content-md-center" id="navbarCollapse">
-                      <Nav/>
-                      <Social/>
+                        <Nav/>
+                        <Social/>
                     </div>
                 </nav>
             </header>

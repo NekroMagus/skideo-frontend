@@ -6,7 +6,7 @@ const getInstance = () => {
     return axios.create({
         baseURL: 'http://194.31.52.136:8080/',
         headers: {
-            "Authorization" : localStorage.getItem("token")
+            "Authorization": localStorage.getItem("token")
         }
     });
 };
@@ -26,6 +26,6 @@ export const profileAPI = {
         return getInstance().get('profile');
     },
     editProfile(user) {
-        return getInstance().put('profile/edit', {user})
+        return getInstance().put('profile', {user})
     }
 };

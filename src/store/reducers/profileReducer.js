@@ -4,7 +4,7 @@ import {logout} from "./authReducer";
 const SET_PROFILE = "SET_PROFILE";
 
 const initialState = {
-    name:null,
+    name: null,
     surname: null,
     roleFootball: null,
     login: null,
@@ -33,20 +33,20 @@ const setProfile = (payload) => ({type: SET_PROFILE, payload});
 
 export const getProfileData = () => (dispatch) => {
     profileAPI.getProfile()
-        .then(res=> {
+        .then(res => {
             dispatch(setProfile(res.data));
         })
-        .catch(err =>{
-             if (err.response.status === 401) {
-                 dispatch(logout());
-             }
+        .catch(err => {
+            if (err.response.status === 401) {
+                dispatch(logout());
+            }
         });
 };
 
 export const setProfileData = (user) => (dispatch) => {
     profileAPI.editProfile(user)
-        .then(res=> {
-            console.log(res.data);
+        .then(res => {
+            dispatch(setProfile(user));
         })
         .catch(err => {
             console.log(err.response);

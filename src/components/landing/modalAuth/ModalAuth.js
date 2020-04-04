@@ -66,7 +66,7 @@ class ModalAuth extends Component {
     }
 }
 
-const mapStateToProps = (state) =>({
+const mapStateToProps = (state) => ({
     isAuth: state.auth.isAuth
 });
 
