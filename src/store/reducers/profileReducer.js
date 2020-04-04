@@ -44,9 +44,11 @@ export const getProfileData = () => (dispatch) => {
 };
 
 export const setProfileData = (user) => (dispatch) => {
+    console.log(user);
     profileAPI.editProfile(user)
         .then(res => {
-            dispatch(setProfile(user));
+            dispatch(setProfile(res.data));
+            console.log(res.data);
         })
         .catch(err => {
             console.log(err.response);

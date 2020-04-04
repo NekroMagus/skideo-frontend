@@ -26,6 +26,6 @@ export const profileAPI = {
         return getInstance().get('profile');
     },
     editProfile(user) {
-        return getInstance().put('profile', {user})
+        return getInstance().put('profile', {...user})
     }
 };
