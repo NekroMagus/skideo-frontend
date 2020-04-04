@@ -31,7 +31,7 @@ const profileReducer = (state = initialState, action) => {
 
 const setProfile = (payload) => ({type: SET_PROFILE, payload});
 
-export const setProfileData = () => (dispatch) => {
+export const getProfileData = () => (dispatch) => {
     profileAPI.getProfile()
         .then(res=> {
             dispatch(setProfile(res.data));
@@ -41,6 +41,16 @@ export const setProfileData = () => (dispatch) => {
                  dispatch(logout());
              }
         });
+};
+
+export const setProfileData = (user) => (dispatch) => {
+    profileAPI.editProfile(user)
+        .then(res=> {
+            console.log(res.data);
+        })
+        .catch(err => {
+            console.log(err.response);
+        })
 };
 
 export default profileReducer;

@@ -1,10 +1,13 @@
 import React, {Component} from 'react';
-import './bootstrap.css';
-import {Route, withRouter} from "react-router-dom";
+import {Route, Switch, withRouter} from "react-router-dom";
 import Profile from "./pages/Profile";
 import Landing from "./pages/Landing";
 import {connect} from "react-redux";
 import {initializeApp} from "./store/reducers/appReducer";
+import ProfileEdit from "./pages/ProfileEdit";
+import Header from "./components/common/header/Header";
+import Footer from "./components/common/footer/Footer";
+import css from './App.module.css';
 
 class App extends Component {
 
@@ -13,7 +16,7 @@ class App extends Component {
     }
 
     render() {
-        if(!this.props.isInit) {
+        if (!this.props.isInit) {
             return <div>
                 WAIT MOMENT
             </div>;
@@ -21,8 +24,18 @@ class App extends Component {
 
         return (
             <>
-                <Route path="/" exact render={() => <Landing/>}/>
-                <Route path="/profile" exact render={() => <Profile/>}/>
+                <Header/>
+
+                <Switch>
+                    <Route path="/" exact render={() => <Landing/>}/>
+                    <div className={`container ${css.top} center`}>
+                        <Route path="/profile" exact render={() => <Profile/>}/>
+                        <Route path={"/profile/edit"} exact render={() => <ProfileEdit/>}/>
+                        {/*<Route path='*' render={() => <div>404 NOT FOUND</div>}/>*/}
+                    </div>
+                </Switch>
+
+                <Footer/>
             </>
         );
     }

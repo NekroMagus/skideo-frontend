@@ -5,7 +5,7 @@ import css from "../ModalAuth.module.css";
 import React from "react";
 
 const Input = FormControl('input');
-const minLength = minLengthCreator(8);
+const minLength = minLengthCreator(6);
 
 const AuthForm = (props) => {
     return (

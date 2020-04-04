@@ -1,18 +1,20 @@
 import React, {Component} from "react";
-import Header from "../components/common/header/Header";
-import Footer from "../components/common/footer/Footer";
 import {compose} from "redux";
 import {withAuthRedirect} from "../hoc/withAuthRedirect";
-import ProfileInfo from "../components/profile/ProfileInfo";
+import Avatar from "../components/profile/avatar/Avatar";
+import ProfileData from "../components/profile/info/ProfileData";
 
 class Profile extends Component {
     render() {
         return (
-            <>
-                <Header/>
-                <ProfileInfo/>
-                <Footer/>
-            </>
+            <main>
+                <div className={`alignCenter`}>
+                    <Avatar/>
+                </div>
+                <div>
+                    <ProfileData/>
+                </div>
+            </main>
         );
     }
 }

@@ -24,5 +24,8 @@ export const authAPI = {
 export const profileAPI = {
     getProfile() {
         return getInstance().get('profile');
+    },
+    editProfile(user) {
+        return getInstance().put('profile/edit', {user})
     }
 };

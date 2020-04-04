@@ -6,9 +6,17 @@ ul, li {
 
 a, a:hover, a:after, a:before {
     text-decoration: none;
-    color: white;
 }
 
 .alignCenter {
     text-align: center;
+}
+
+.alignEnd {
+    text-align: end;
+}
+
+.center {
+    padding-left: 20%;
+    padding-right: 20%;
 }

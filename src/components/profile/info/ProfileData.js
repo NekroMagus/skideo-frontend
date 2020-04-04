@@ -1,13 +1,13 @@
 import React, {Component} from 'react';
 import {connect} from "react-redux";
-import {setProfileData} from "../../../store/reducers/profileReducer";
+import {getProfileData} from "../../../store/reducers/profileReducer";
 import css from './ProfileData.module.css';
 import {NavLink} from "react-router-dom";
 
 class ProfileData extends Component {
 
     componentDidMount() {
-        this.props.setProfileData();
+        this.props.getProfileData();
     }
 
     render() {
@@ -20,14 +20,73 @@ class ProfileData extends Component {
                         <NavLink to={"/profile/edit"}>ред. профиль</NavLink>
                     </div>
                 </div>
-                <p className={css.underline}>Логин:<span className={css.marginLeft}>{this.props.user.login}</span></p>
-                <p className={css.underline}>Амплуа: {this.props.user.roleFootball}</p>
-                <p className={css.underline}>E-mail: {this.props.user.email}</p>
-                <p className={css.underline}>Телефон: {this.props.user.telephoneNumber}</p>
-                <p className={css.underline}>Дата рождения: {this.props.user.dateOfBirth}</p>
-                <p className={css.underline}>Страна: {this.props.user.country}</p>
-                <p className={css.underline}>Город: {this.props.user.city}</p>
-                <p className={css.underline}>Вы в соц.сети: {this.props.user.socialNetwork}</p>
+                <div className={"row"}>
+                    <div className={`col-4 offset-2 ${css.underline}`}>
+                        <span>Логин:</span>
+                    </div>
+                    <div className={`col-4 ${css.underline} alignEnd`}>
+                        <span>{this.props.user.login}</span>
+                    </div>
+                </div>
+                <div className={"row"}>
+                    <div className={`col-4 offset-2 ${css.underline}`}>
+                        <span>Амплуа:</span>
+                    </div>
+                    <div className={`col-4 ${css.underline} alignEnd`}>
+                        <span>{this.props.user.roleFootball}</span>
+                    </div>
+                </div>
+                <div className={"row"}>
+                    <div className={`col-4 offset-2 ${css.underline}`}>
+                        <span>E-mail:</span>
+                    </div>
+                    <div className={`col-4 ${css.underline} alignEnd`}>
+                        <span>{this.props.user.email}</span>
+                    </div>
+                </div>
+                <div className={"row"}>
+                    <div className={`col-4 offset-2 ${css.underline}`}>
+                        <span>Телефон:</span>
+                    </div>
+                    <div className={`col-4 ${css.underline} alignEnd`}>
+                        <span>{this.props.user.telephoneNumber}</span>
+                    </div>
+                </div>
+                <div className={"row"}>
+                    <div className={`col-4 offset-2 ${css.underline}`}>
+                        <span>Дата рождения:</span>
+                    </div>
+                    <div className={`col-4 ${css.underline} alignEnd`}>
+                        <span>{this.props.user.dateOfBirth}</span>
+                    </div>
+                </div>
+                <div className={"row"}>
+                    <div className={`col-4 offset-2 ${css.underline}`}>
+                        <span>Страна:</span>
+                    </div>
+                    <div className={`col-4 ${css.underline} alignEnd`}>
+                        <span>{this.props.user.country}</span>
+                    </div>
+                </div>
+                <div className={"row"}>
+                    <div className={`col-4 offset-2 ${css.underline}`}>
+                        <span>Город:</span>
+                    </div>
+                    <div className={`col-4 ${css.underline} alignEnd`}>
+                        <span>{this.props.user.city}</span>
+                    </div>
+                </div>
+                <div className={"row"}>
+                    <div className={`col-4 offset-2 ${css.underline}`}>
+                        <span>Вы в соц.сети:</span>
+                    </div>
+                    <div className={`col-4 ${css.underline} alignEnd`}>
+                        <span>{this.props.user.socialNetwork}</span>
+                    </div>
+                </div>
+                <div className={`alignCenter ${css.marginTop}`}>
+                    <NavLink to={"/profile/video"}>Мои видео</NavLink>
+                </div>
             </div>
         );
     }
@@ -37,4 +96,4 @@ const mapStateToProps = (state) => ({
     user: state.profile
 });
 
-export default connect(mapStateToProps, {setProfileData})(ProfileData);
+export default connect(mapStateToProps, {getProfileData})(ProfileData);
