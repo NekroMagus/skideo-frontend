@@ -27,5 +27,8 @@ export const profileAPI = {
   },
   editProfile(user) {
     return getInstance().put('profile', {...user})
+  },
+  setVideo(video) {
+    return getInstance().post('profile/video',{...video});
   }
 };

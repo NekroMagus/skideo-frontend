@@ -2,22 +2,15 @@ import React, {Component} from "react";
 import css from './Skideo.module.css';
 import {connect} from "react-redux";
 import ModalAuth from "../modalAuth/ModalAuth";
+import ModalVideo from "../modalVideo/ModalVideo";
 
 class Skideo extends Component {
 
   constructor(props) {
     super(props);
     this.state = {
-      isModalAuthShow: false
-    }
-  }
-
-  componentDidUpdate(prevProps, prevState, snapshot) {
-    if (prevProps.isAuth) {
-      this.setState({
-        ...this.state,
-        isModalAuthShow: false
-      })
+      isModalAuthShow: false,
+      isModalVideoShow: false
     }
   }
 
@@ -27,10 +20,10 @@ class Skideo extends Component {
     })
   };
 
-  toggleAddVideoModal = () => {
+  toggleVideoModal = () => {
     this.setState({
       ...this.state,
-      isModalShow: !this.state.isModalShow
+      isModalVideoShow: !this.state.isModalVideoShow
     });
   };
 
@@ -44,7 +37,7 @@ class Skideo extends Component {
                 <h1 className={css.title}>Skideo</h1>
                 <p className={css.text}>UPLOAD YOUR SKILLS AND GET A CHANCE</p>
                 {this.props.isAuth
-                    ? <button className={css.button} onClick={this.toggleAddVideoModal}>Добавить
+                    ? <button className={css.button} onClick={this.toggleVideoModal}>Добавить
                       видео</button>
                     : <button onClick={this.toggleModalAuth} className={css.button}>Добавить
                       видео</button>
@@ -56,6 +49,9 @@ class Skideo extends Component {
           <ModalAuth
               isModalShow={this.state.isModalAuthShow}
               toggleModalAuth={this.toggleModalAuth}/>
+          <ModalVideo
+              isModalVideoShow={this.state.isModalVideoShow}
+              toggleModalVideo={this.toggleVideoModal}/>
         </section>
     );
   }
