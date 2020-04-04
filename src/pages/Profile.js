@@ -11,7 +11,6 @@ class Profile extends Component {
                 <div className={`alignCenter`}>
                     <Avatar/>
                 </div>
-                asdf
                 <div>
                     <ProfileData/>
                 </div>
