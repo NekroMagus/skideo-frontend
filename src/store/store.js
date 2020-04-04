@@ -6,10 +6,10 @@ import appReducer from "./reducers/appReducer";
 import profileReducer from "./reducers/profileReducer";
 
 const reducers = combineReducers({
-    auth: authReducer,
-    form: formReducer,
-    app: appReducer,
-    profile: profileReducer
+  auth: authReducer,
+  form: formReducer,
+  app: appReducer,
+  profile: profileReducer
 });
 
 const store = createStore(reducers, applyMiddleware(thunk));

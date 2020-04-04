@@ -6,22 +6,22 @@ import football from '../../../static/img/kick-white.png';
 import {NavLink} from "react-router-dom";
 
 const Footer = () => {
-    return (
-        <footer>
-            <nav className={css.center}>
-                <div className={css.padding}>
-                    <img className={css.animation} src={football} alt="Skideo kick"/>
-                    <NavLink className={css.title} to="/">Skideo</NavLink>
-                </div>
-                <div>
-                    <Nav/>
-                </div>
-                <div>
-                    <Social/>
-                </div>
-            </nav>
-        </footer>
-    );
+  return (
+      <footer>
+        <nav className={css.center}>
+          <div className={css.padding}>
+            <img className={css.animation} src={football} alt="Skideo kick"/>
+            <NavLink className={css.title} to="/">Skideo</NavLink>
+          </div>
+          <div>
+            <Nav/>
+          </div>
+          <div>
+            <Social/>
+          </div>
+        </nav>
+      </footer>
+  );
 };
 
 

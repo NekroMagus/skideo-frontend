@@ -4,14 +4,14 @@ import Partners from "../components/landing/partners/Partners";
 import Dream from "../components/landing/dream/Dream";
 
 const Landing = () => {
-    return (
-        <main>
-            <Skideo/>
-            <Partners/>
-            <Dream/>
-        </main>
+  return (
+      <main>
+        <Skideo/>
+        <Partners/>
+        <Dream/>
+      </main>
 
-    );
+  );
 };
 
 export default Landing;

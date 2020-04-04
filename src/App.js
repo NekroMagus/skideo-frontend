@@ -11,38 +11,38 @@ import css from './App.module.css';
 
 class App extends Component {
 
-    componentDidMount() {
-        this.props.initializeApp();
+  componentDidMount() {
+    this.props.initializeApp();
+  }
+
+  render() {
+    if (!this.props.isInit) {
+      return <div>
+        WAIT MOMENT
+      </div>;
     }
 
-    render() {
-        if (!this.props.isInit) {
-            return <div>
-                WAIT MOMENT
-            </div>;
-        }
+    return (
+        <>
+          <Header/>
 
-        return (
-            <>
-                <Header/>
+          <Switch>
+            <Route path="/" exact render={() => <Landing/>}/>
+            <div className={`container ${css.top} center`}>
+              <Route path="/profile" exact render={() => <Profile/>}/>
+              <Route path={"/profile/edit"} exact render={() => <ProfileEdit/>}/>
+              {/*<Route path='*' render={() => <div>404 NOT FOUND</div>}/>*/}
+            </div>
+          </Switch>
 
-                <Switch>
-                    <Route path="/" exact render={() => <Landing/>}/>
-                    <div className={`container ${css.top} center`}>
-                        <Route path="/profile" exact render={() => <Profile/>}/>
-                        <Route path={"/profile/edit"} exact render={() => <ProfileEdit/>}/>
-                        {/*<Route path='*' render={() => <div>404 NOT FOUND</div>}/>*/}
-                    </div>
-                </Switch>
-
-                <Footer/>
-            </>
-        );
-    }
+          <Footer/>
+        </>
+    );
+  }
 }
 
 const mapStateToProps = (state) => ({
-    isInit: state.app.isInit
+  isInit: state.app.isInit
 });
 
 export default withRouter(connect(mapStateToProps, {initializeApp})(App));
