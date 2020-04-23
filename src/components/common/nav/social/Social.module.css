@@ -1,23 +1,7 @@
-.vk, .fb, .inst {
-    transition: 0.2s;
-    padding-top: 0;
-    width: 2rem;
-    height: 2rem;
+.padding {
+    padding-bottom: 30px;
 }
 
-.vk:hover, .fb:hover, .inst:hover {
-    transition: 0.2s;
-    transform: scale(1.6);
-}
-
-.inline {
-    display: inline-flex;
-}
-
-.navLink {
-    padding: 8px 16px;
-}
-
-.navItem {
-    margin-top: 10px;
+.navbarSocial >  a:not(:last-child) {
+    margin-right: 20px;
 }

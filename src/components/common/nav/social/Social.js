@@ -1,27 +1,15 @@
 import React from "react";
-
-import css from './Social.module.css'
-import vk from "../../../../static/img/vk.png";
-import fb from "../../../../static/img/fb.png";
-import inst from "../../../../static/img/inst.png";
 import {NavLink} from "react-router-dom";
+import css from './Social.module.css'
 
-const Social = () => {
-  return (
-      <>
-        <ul className={css.inline}>
-          <li className={css.navItem}>
-            <NavLink className={css.navLink} to="/"><img className={css.vk} src={vk} alt="vk"/></NavLink>
-          </li>
-          <li className={css.navItem}>
-            <NavLink className={css.navLink} to="/"><img className={css.fb} src={fb} alt="fb"/></NavLink>
-          </li>
-          <li className={css.navItem}>
-            <NavLink className={css.navLink} to="/"><img className={css.inst} src={inst} alt="inst"/></NavLink>
-          </li>
-        </ul>
-      </>
-  );
+const Social = ({isBottom}) => {
+    return (
+        <div className={`${css.navbarSocial} ${isBottom && css.padding}`}>
+            <NavLink to="#" className="fa fa-vk navbar--social--icon"/>
+            <NavLink to="#" className="fa fa-facebook-official navbar--social--icon"/>
+            <NavLink to="#" className="fa fa-instagram navbar--social--icon"/>
+        </div>
+    );
 };
 
 export default Social;

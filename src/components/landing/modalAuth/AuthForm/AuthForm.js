@@ -9,25 +9,43 @@ const minLength = minLengthCreator(6);
 
 const AuthForm = (props) => {
   return (
-      <form onSubmit={props.handleSubmit}>
-        {props.error && <div className={css.error}>{props.error}</div>}
-        <Field
-            className={css.tab}
-            name={"login"}
-            component={Input}
-            placeholder={"login"}
-            autoComplete={"off"}
-            validate={[requiredField, minLength]}/>
-        <Field className={css.tab}
-               name={"password"}
-               component={Input}
-               placeholder={"password"}
-               type={"password"}
-               validate={[requiredField, minLength]}/>
-        <div className={css.center}>
-          <button className={css.button}>Авторизоваться</button>
+        <div className="modal-content">
+          <div className="text-center">
+            <h2>Вход</h2>
+            <div className="push20"></div>
+          </div>
+          <form onSubmit={props.handleSubmit}>
+            <div className="input">
+              <div className="blockinput">
+                <h4>Логин</h4>
+                {props.error && <div className={css.error}>{props.error}</div>}
+                <Field
+                    className="email"
+                    name={"login"}
+                    component={Input}
+                    placeholder={"Введите логин*"}
+                    autoComplete={"off"}
+                    validate={[requiredField, minLength]}/>
+              </div>
+              <div className="push20"></div>
+              <div className="blockinput">
+                <h4>Пароль</h4>
+                <Field className=""
+                       name={"password"}
+                       component={Input}
+                       placeholder={"Введите пароль*"}
+                       type={"password"}
+                       validate={[requiredField, minLength]}/>
+              </div>
+            </div>
+            <div className="push20"></div>
+            <button className="btn btn-send">Войти</button>
+            {/*<div className="conditions">*/}
+            {/*  <a href="recovery.html">Напомнить пароль</a>*/}
+            {/*</div>*/}
+          </form>
         </div>
-      </form>
+
   );
 };
 

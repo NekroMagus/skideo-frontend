@@ -33,15 +33,14 @@ const logoutState = () => ({type: LOGOUT});
 
 export const login = (login, password) => (dispatch) => {
   localStorage.removeItem("token");
-  console.log(localStorage.getItem("token"));
-  authAPI.login(login, password)
+  return authAPI.login(login, password)
       .then(res => {
         localStorage.setItem("token", res.data.jwtToken);
         dispatch(authenticate());
-        console.log(localStorage.getItem("token"));
+        return true;
       })
       .catch(error => {
-        if (error.response.status === 404) {
+        if (error.response && (error.response.status === 404 || error.response.status === 401)) {
           dispatch(stopSubmit("login", {_error: "Логин или пароль неверны"}))
         }
       });
@@ -49,13 +48,14 @@ export const login = (login, password) => (dispatch) => {
 
 export const registration = (login, password) => (dispatch) => {
   localStorage.removeItem("token");
-  authAPI.register(login, password)
+  return authAPI.register(login, password)
       .then(res => {
         localStorage.setItem("token", res.data.jwtToken);
         dispatch(authenticate());
+        return true;
       })
       .catch(error => {
-        if (error.response.status === 422) {
+        if (error.response && error.response.status === 422) {
           dispatch(stopSubmit("registration", {_error: "Пользователь с таким логином уже существует"}))
         }
       })
@@ -63,7 +63,6 @@ export const registration = (login, password) => (dispatch) => {
 
 export const logout = () => (dispatch) => {
   localStorage.removeItem("token");
-  console.log(localStorage.getItem("token"));
   dispatch(logoutState());
 };
 

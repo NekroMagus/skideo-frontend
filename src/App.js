@@ -8,41 +8,44 @@ import ProfileEdit from "./pages/ProfileEdit";
 import Header from "./components/common/header/Header";
 import Footer from "./components/common/footer/Footer";
 import css from './App.module.css';
+import Prof from "./pages/Prof";
+import ProfEdit from "./pages/ProfEdit";
+import Land from "./pages/Land";
 
 class App extends Component {
 
-  componentDidMount() {
-    this.props.initializeApp();
-  }
-
-  render() {
-    if (!this.props.isInit) {
-      return <div>
-        WAIT MOMENT
-      </div>;
+    componentDidMount() {
+        this.props.initializeApp();
     }
 
-    return (
-        <>
-          <Header/>
+    render() {
+        if (!this.props.isInit) {
+            return <div>
+                WAIT MOMENT
+            </div>;
+        }
 
-          <Switch>
-            <Route path="/" exact render={() => <Landing/>}/>
-            <div className={`container ${css.top} center`}>
-              <Route path="/profile" exact render={() => <Profile/>}/>
-              <Route path={"/profile/edit"} exact render={() => <ProfileEdit/>}/>
-              {/*<Route path='*' render={() => <div>404 NOT FOUND</div>}/>*/}
-            </div>
-          </Switch>
+        return (
+            <>
+                {/*<Header/>*/}
 
-          <Footer/>
-        </>
-    );
-  }
+                <Switch>
+                    <Route path="/" exact render={() => <Land/>}/>
+                    {/*<Route path="/profile" exact render={() => <Profile/>}/>*/}
+                    {/*<Route path={"/profile/edit"} exact render={() => <ProfileEdit/>}/>*/}
+                    <Route path={"/profile"} exact render={() => <Prof/>}/>
+                    <Route path={"/profile/edit"} exact render={()=><ProfEdit/>}/>
+                    {/*<Route path='*' render={() => <div>404 NOT FOUND</div>}/>*/}
+                </Switch>
+
+                <Footer/>
+            </>
+        );
+    }
 }
 
 const mapStateToProps = (state) => ({
-  isInit: state.app.isInit
+    isInit: state.app.isInit
 });
 
 export default withRouter(connect(mapStateToProps, {initializeApp})(App));

@@ -1,8 +1,8 @@
 import {profileAPI} from "../../api/api";
 import {logout} from "./authReducer";
+import {stopSubmit} from "redux-form";
 
 const SET_PROFILE = "SET_PROFILE";
-const SET_VIDEO = "SET_VIDEO";
 
 const initialState = {
   name: null,
@@ -15,7 +15,6 @@ const initialState = {
   country: null,
   city: null,
   socialNetwork: null,
-  video: null
 };
 
 const profileReducer = (state = initialState, action) => {
@@ -26,49 +25,41 @@ const profileReducer = (state = initialState, action) => {
         ...action.payload
       }
     }
-    case SET_VIDEO: {
-      return {
-        ...state,
-        video: action.video
-      }
-    }
     default:
       return state;
   }
 };
 
 const setProfile = (payload) => ({type: SET_PROFILE, payload});
-const setStateVideo = video => ({type: SET_VIDEO, video});
 
-export const getProfileData = () => dispatch => {
+export const getProfileData = () => (dispatch) => {
   profileAPI.getProfile()
       .then(res => {
         dispatch(setProfile(res.data));
       })
       .catch(err => {
-        if (err.response.status === 401) {
+        if (err.response && err.response.status === 401) {
           dispatch(logout());
         }
       });
 };
 
-export const setProfileData = user => dispatch => {
-  profileAPI.editProfile(user)
+export const setProfileData = (user) => (dispatch) => {
+  if(user.roleFootball !== null &&  user.roleFootball.length === 0) {
+    user.roleFootball = null;
+  }
+  return profileAPI.editProfile(user)
       .then(res => {
         dispatch(setProfile(res.data));
+        return true;
       })
       .catch(err => {
-        console.log(err.response);
-      })
-};
-
-export const setVideo = video => dispatch => {
-  profileAPI.setVideo(video)
-      .then(res => {
-        dispatch(setStateVideo(res.data));
-      })
-      .catch(err => {
-        console.log(err.response);
+        if (err.response && err.response.status === 401) {
+          dispatch(logout());
+        }
+        if (err.response && err.response.status === 400) {
+          dispatch(stopSubmit('profile-edit',{_error: "Введите дату рождения"}))
+        }
       })
 };
 

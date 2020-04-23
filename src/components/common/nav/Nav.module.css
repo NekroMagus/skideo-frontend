@@ -1,40 +1,15 @@
-.nav, .nav:hover {
-    padding-right: 20px;
-    font-size: 1rem;
-    transition: 0.2s;
-    color: white;
-    margin: auto auto;
+.navbarList {
+    padding-left: 50px;
+    display: flex;
 }
 
-@media screen and (min-width: 1400px) {
-    .nav, .nav:hover {
-        font-size: 1.5rem;
-    }
-}
-
-@media screen and (max-width: 767px) {
-    .nav, .nav:hover {
-        padding-right: 10px;
-    }
-}
-
-.nav:hover {
-    transform: translate(0.0, 10px) scale(1.2);
-}
-
-.navLink, .navLink:hover {
-    color: white;
+.navbarList a{
     text-decoration: none;
-    padding: 8px;
+    color: #fff;
 }
-
-.barNav {
-    margin-top: 10px;
-    display: inline-flex;
+.navbarList :not(:last-child) {
+    margin-right: 25px;
 }
-
-@media screen and (max-width: 425px) {
-    .barNav {
-        display: none;
-    }
+.navbarList li:last-child {
+    margin-right: 50px;
 }
