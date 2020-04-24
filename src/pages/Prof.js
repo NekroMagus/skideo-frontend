@@ -1,12 +1,30 @@
 import React, {Component} from 'react';
-import logo from '../static/img/index.jpg';
 import {connect} from "react-redux";
 import HeaderSecond from "../components/common/header-another/HeaderSecond";
 import {NavLink} from "react-router-dom";
 import {compose} from "redux";
 import {withAuthRedirect} from "../hoc/withAuthRedirect";
+import logo from '../static/img/avatar.jpg';
+import ModalVideo from "../components/common/modalVideo/ModalVideo";
 
 class Prof extends Component {
+
+  constructor(props) {
+    super(props);
+    this.state ={isModalOpen: false}
+  }
+
+  openModal = () => {
+    this.setState({
+      isModalOpen: true
+    })
+  };
+
+  closeModal = () => {
+    this.setState({
+      isModalOpen: false
+    })
+  };
 
   render() {
     return (
@@ -31,7 +49,7 @@ class Prof extends Component {
 
                         </div>
                         <div className="d-flex" style={{justifyContent: "space-between"}}>
-                          <h1 className="profile-title">Обо мне</h1>
+                          <h1 onClick={this.openModal} className="profile-title">добавить видео</h1>
                           <NavLink className="profile_edit" to={"/profile/edit"}>Ред.
                             профиль</NavLink>
                         </div>
@@ -121,45 +139,19 @@ class Prof extends Component {
                 </div>
                 <div className="col-md-3">
                   <div className="btn-videos">
-                    <a href="my-video.html">
+                    <NavLink to={"/profile/video"}>
                       <p className="btn-text">Мои видео</p>
                       <div className="circle">
                         <div className="triangle"></div>
                       </div>
-                    </a>
+                    </NavLink>
                   </div>
                 </div>
               </div>
             </div>
           </section>
 
-
-          <div className="modal-overlay2">
-            <div className="modal2">
-              <a className="close-modal2">
-                <svg viewBox="0 0 20 20">
-                  <path fill="#000000"
-                        d="M15.898,4.045c-0.271-0.272-0.713-0.272-0.986,0l-4.71,4.711L5.493,4.045c-0.272-0.272-0.714-0.272-0.986,0s-0.272,0.714,0,0.986l4.709,4.711l-4.71,4.711c-0.272,0.271-0.272,0.713,0,0.986c0.136,0.136,0.314,0.203,0.492,0.203c0.179,0,0.357-0.067,0.493-0.203l4.711-4.711l4.71,4.711c0.137,0.136,0.314,0.203,0.494,0.203c0.178,0,0.355-0.067,0.492-0.203c0.273-0.273,0.273-0.715,0-0.986l-4.711-4.711l4.711-4.711C16.172,4.759,16.172,4.317,15.898,4.045z"></path>
-                </svg>
-              </a>
-              <div className="modal-content2 text-center">
-                <h2>Редактировать фото</h2>
-                <div className="push20"></div>
-                <form action="">
-                  <div className="blockinput">
-                    <div className="col-8">
-                      <input type="file" id="file-input" name="INPUT_FIELD" accept="image/*"/>
-                      <span id="output"></span>
-                      <label className="file-input" type="file" accept="image/*" for="file-input"><b>Выберите
-                        файл</b></label>
-                    </div>
-                  </div>
-                  <div className="push20"></div>
-                  <button className="btn">Изменить</button>
-                </form>
-              </div>
-            </div>
-          </div>
+          <ModalVideo ismModalOpen={this.state.isModalOpen} closeModal={this.closeModal}/>
         </>
     );
   }

@@ -16,6 +16,14 @@ class HeaderSecond extends Component {
     }
   }
 
+  componentDidMount() {
+    window.addEventListener('scroll', this.onScrolling, true);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.onScrolling);
+  }
+
   onScrolling = () => {
     if (window.scrollY > 10) {
       this.setState({isTop: false})
@@ -24,13 +32,15 @@ class HeaderSecond extends Component {
     }
   };
 
-  componentDidMount() {
-    window.addEventListener('scroll', this.onScrolling, true);
-  }
+  toggleModal = () => {
+    if (document.body.classList.contains("hamburger-active")) {
+      document.body.classList.remove("hamburger-active");
+    } else {
+      document.body.classList.add("hamburger-active");
+    }
+  };
 
-  componentWillUnmount() {
-    window.removeEventListener('scroll', this.onScrolling);
-  }
+
 
   logout = () => {
     this.props.logout();
@@ -41,13 +51,13 @@ class HeaderSecond extends Component {
         <header className={this.state.isTop ? "" : css.scrollMenu}>
           <div className="container">
             <div className={css.mobileMenu}>
-              <div id="hamburger" className="hamburger-icon-wrapper">
+              <div onClick={this.toggleModal} id="hamburger" className="hamburger-icon-wrapper">
                 <span className="hamburger-icon"></span>
               </div>
               <div className="hamburger-menu">
                 {this.props.isAuth
-                    ? <button onClick={this.logout} className={"btn btn-register diplay-none"}>Выйти</button>
-                    : <button className="btn btn-register open-modal diplay-none">Вход/Регистрация</button>
+                    ? <button onClick={this.logout} className={"btn btn-register"}>Выйти</button>
+                    : <button className="btn btn-register open-modal">Вход/Регистрация</button>
                 }
                 <div id="menu" className="hamburger-menu-list">
                   <Nav/>

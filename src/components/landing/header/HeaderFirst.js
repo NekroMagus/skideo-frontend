@@ -16,6 +16,14 @@ class HeaderFirst extends Component {
     }
   }
 
+  componentDidMount() {
+    window.addEventListener('scroll', this.onScrolling, true);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.onScrolling);
+  }
+
   onScrolling = () => {
     if (window.scrollY > 10) {
       this.setState({
@@ -42,13 +50,7 @@ class HeaderFirst extends Component {
     this.props.logout();
   };
 
-  componentDidMount() {
-    window.addEventListener('scroll', this.onScrolling, true);
-  }
 
-  componentWillUnmount() {
-    window.removeEventListener('scroll', this.onScrolling);
-  }
 
   render() {
     return (
@@ -61,7 +63,8 @@ class HeaderFirst extends Component {
                 <span className="hamburger-icon"></span>
               </div>
               <div className="hamburger-menu">
-                {this.props.isAuth
+                {
+                  this.props.isAuth
                     ? <button onClick={this.logout} className={"btn btn-register"}>Выйти</button>
                     : <button onClick={this.props.onOpenModal}
                               className="btn btn-register open-modal">Вход/Регистрация</button>
@@ -81,7 +84,6 @@ class HeaderFirst extends Component {
               <Logo/>
               <Nav/>
               <Social isBottom={false}/>
-
               {
                 this.props.isAuth
                   ? <button onClick={this.logout} className={"btn btn-register display-none"}>Выйти</button>

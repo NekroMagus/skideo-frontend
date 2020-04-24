@@ -11,6 +11,7 @@ import css from './App.module.css';
 import Prof from "./pages/Prof";
 import ProfEdit from "./pages/ProfEdit";
 import Land from "./pages/Land";
+import ProfileVideo from "./pages/ProfileVideo";
 
 class App extends Component {
 
@@ -35,6 +36,7 @@ class App extends Component {
                     {/*<Route path={"/profile/edit"} exact render={() => <ProfileEdit/>}/>*/}
                     <Route path={"/profile"} exact render={() => <Prof/>}/>
                     <Route path={"/profile/edit"} exact render={()=><ProfEdit/>}/>
+                    <Route path={"/profile/video"} exact render={()=><ProfileVideo/>}/>
                     {/*<Route path='*' render={() => <div>404 NOT FOUND</div>}/>*/}
                 </Switch>
 

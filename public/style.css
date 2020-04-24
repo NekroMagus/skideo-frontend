@@ -467,6 +467,7 @@ footer {
 .edit-title, .profile-title {
   text-align: center;
   margin: 25px 15px;
+  cursor: pointer;
 }
 
 .input-img {

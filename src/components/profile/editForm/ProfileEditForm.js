@@ -54,8 +54,8 @@ const ProfileEditForm = (props) => {
                 </div>
               </div>
               <div className="col-8">
-                <Field className="custom-select" allowNull={true} id="inputGroupSelect01" name="roleFootball" component={"select"}>
-                  <option value={''}>Ничего не выбрано</option>
+                <Field className="custom-select" id="inputGroupSelect01" name="roleFootball" component={"select"}>
+                  <option value={""}>Ничего не выбрано</option>
                   <option value="GK">Вратарь</option>
                   <option value="SW">Свободный защитник</option>
                   <option value="RB">Правый защитник</option>
