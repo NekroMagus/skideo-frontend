@@ -1,22 +1,32 @@
 import React, {Component} from 'react';
 import HeaderSecond from "../components/common/header-another/HeaderSecond";
 import {NavLink} from "react-router-dom";
+import {connect} from "react-redux";
+import {compose} from "redux";
+import {withAuthRedirect} from "../hoc/withAuthRedirect";
 
 class ProfileVideo extends Component {
   render() {
     return (
         <>
           <HeaderSecond/>
-          <section className="text-center" style={{"paddingBottom": "100px","paddingTop": "100px"}}>
+          <section className="text-center" style={{"paddingBottom": "100px", "paddingTop": "100px"}}>
             <div className="container">
               <h1 className="" style={{"color": "#000"}}>Мои видео</h1>
               <div className="push20"></div>
-              <p style={{"color": "#000"}}>Вы еще не добавили видео.</p>
+              {this.props.video ? null :  <p style={{"color": "#000"}}>Вы еще не добавили видео.</p>}
               <div className="row">
                 <div className="col">
-                  <iframe width="560" height="315" src="https://www.youtube.com/embed/SEqF-iHCblE" frameBorder="0"
-                          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                          allowFullScreen></iframe>
+                  {
+                    this.props.video
+                      ?<iframe width="240" height="200" src={`${this.props.video.replace("watch?v=", "embed/").replace("youtu.be","youtube.com/embed")}`} frameBorder="0"
+                               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                               allowFullScreen/>
+                      : <iframe width="240" height="200" src="https://www.youtube.com/embed/npnp--SSx_8" frameBorder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowFullScreen/>
+                  }
+
                 </div>
               </div>
               <div className="push20"></div>
@@ -30,4 +40,10 @@ class ProfileVideo extends Component {
   }
 }
 
-export default ProfileVideo;
+const mapStateToProps = state => ({
+  video: state.profile.video
+});
+
+export default compose(
+    withAuthRedirect,
+    connect(mapStateToProps,{}))(ProfileVideo);

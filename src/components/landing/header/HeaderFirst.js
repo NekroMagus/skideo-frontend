@@ -55,9 +55,7 @@ class HeaderFirst extends Component {
   render() {
     return (
         <header className={`${this.state.isTop ? css.top : css.headerBg}`}>
-
           <div className="container">
-
             <div className={css.mobileMenu}>
               <div onClick={this.toggleModal} id="hamburger" className="hamburger-icon-wrapper">
                 <span className="hamburger-icon"></span>

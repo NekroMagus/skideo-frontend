@@ -4,6 +4,7 @@ import {stopSubmit} from "redux-form";
 
 const SET_PROFILE = "SET_PROFILE";
 const SET_VIDEO = "SET_VIDEO";
+const REMOVE_PROFILE = "REMOVE_PROFILE";
 
 const initialState = {
   name: null,
@@ -12,7 +13,7 @@ const initialState = {
   login: null,
   email: null,
   telephoneNumber: null,
-  dateOfBirth: null,
+  dateOfBirth: [],
   country: null,
   city: null,
   socialNetwork: null,
@@ -33,6 +34,11 @@ const profileReducer = (state = initialState, action) => {
         video: action.video
       }
     }
+    case REMOVE_PROFILE: {
+      return {
+        ...initialState
+      }
+    }
     default:
       return state;
   }
@@ -40,6 +46,7 @@ const profileReducer = (state = initialState, action) => {
 
 const setProfile = (payload) => ({type: SET_PROFILE, payload});
 const setVideo = (video) =>({type: SET_VIDEO, video});
+export const removeProfile = () => ({type:REMOVE_PROFILE});
 
 export const getProfileData = () => (dispatch) => {
   profileAPI.getProfile()

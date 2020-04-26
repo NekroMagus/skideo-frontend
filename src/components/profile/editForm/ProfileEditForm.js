@@ -84,7 +84,11 @@ const ProfileEditForm = (props) => {
                 <p>E-mail:</p>
               </div>
               <div className="col-8">
-                <input type="email" name="email" placeholder="Ваш E-mail"/>
+                <Field
+                    component={Input}
+                    type="email"
+                    name="email"
+                    placeholder="Ваш E-mail"/>
               </div>
             </div>
             <div className="blockinput">

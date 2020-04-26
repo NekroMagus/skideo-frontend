@@ -1,9 +1,11 @@
 import React, {Component} from 'react';
 import VideoForm from "./VideoForm";
+import {connect} from "react-redux";
+import {addVideo} from "../../../store/reducers/profileReducer";
 
 class ModalVideo extends Component {
   render() {
-    if (!this.props.ismModalOpen) {
+    if (!this.props.isModalOpen) {
       return null;
     }
     return (
@@ -18,7 +20,7 @@ class ModalVideo extends Component {
             <div className="modal-content2 text-center">
               <h2>Добавить видео</h2>
               <div className="push20"></div>
-              <VideoForm/>
+              <VideoForm onSubmit={this.props.submitVideo}/>
             </div>
           </div>
         </div>
@@ -26,4 +28,4 @@ class ModalVideo extends Component {
   }
 }
 
-export default ModalVideo;
+export default connect(null, {addVideo})(ModalVideo);

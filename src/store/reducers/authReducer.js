@@ -1,5 +1,6 @@
 import {authAPI} from "../../api/api";
 import {stopSubmit} from "redux-form";
+import {getProfileData, removeProfile} from "./profileReducer";
 
 const AUTH = "AUTH";
 const SUBMIT_FORM_IN_PROGRESS = "SUBMIT_FORM_IN_PROGRESS";
@@ -37,6 +38,7 @@ export const login = (login, password) => (dispatch) => {
       .then(res => {
         localStorage.setItem("token", res.data.jwtToken);
         dispatch(authenticate());
+        dispatch(getProfileData());
         return true;
       })
       .catch(error => {
@@ -64,6 +66,7 @@ export const registration = (login, password) => (dispatch) => {
 export const logout = () => (dispatch) => {
   localStorage.removeItem("token");
   dispatch(logoutState());
+  dispatch(removeProfile());
 };
 
 export default authReducer;

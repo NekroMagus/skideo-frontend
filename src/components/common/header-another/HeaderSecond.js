@@ -55,12 +55,17 @@ class HeaderSecond extends Component {
                 <span className="hamburger-icon"></span>
               </div>
               <div className="hamburger-menu">
-                {this.props.isAuth
+                {
+                  this.props.isAuth
                     ? <button onClick={this.logout} className={"btn btn-register"}>Выйти</button>
                     : <button className="btn btn-register open-modal">Вход/Регистрация</button>
                 }
                 <div id="menu" className="hamburger-menu-list">
-                  <Nav/>
+                  <ul className="navbar--list">
+                    <li className="navbar--list-item"><a href="#">Главная</a></li>
+                    <li className="navbar--list-item"><a href="#">Наши партнеры</a></li>
+                    <li className="navbar--list-item"><a href="#">Достижения</a></li>
+                  </ul>
                 </div>
               </div>
             </div>

@@ -6,6 +6,7 @@ import {compose} from "redux";
 import {withAuthRedirect} from "../hoc/withAuthRedirect";
 import logo from '../static/img/avatar.jpg';
 import ModalVideo from "../components/common/modalVideo/ModalVideo";
+import {addVideo} from "../store/reducers/profileReducer";
 
 class Prof extends Component {
 
@@ -25,6 +26,16 @@ class Prof extends Component {
       isModalOpen: false
     })
   };
+
+  submitVideo = (video)  => {
+    const result = this.props.addVideo(video);
+    result.then(data => {
+      if(data) {
+        this.closeModal();
+      }
+    })
+  };
+
 
   render() {
     return (
@@ -151,7 +162,10 @@ class Prof extends Component {
             </div>
           </section>
 
-          <ModalVideo ismModalOpen={this.state.isModalOpen} closeModal={this.closeModal}/>
+          <ModalVideo isModalOpen ={this.state.isModalOpen}
+                      submitVideo={this.submitVideo}
+                      closeModal={this.closeModal}
+          />
         </>
     );
   }
@@ -163,4 +177,4 @@ const mapStateToProps = state => ({
 
 export default compose(
     withAuthRedirect,
-    connect(mapStateToProps, {}))(Prof);
+    connect(mapStateToProps, {addVideo}))(Prof);
