@@ -9,7 +9,7 @@ import Partners2 from "../components/landing/partners/Partners2";
 import Dream2 from "../components/landing/dream/Dream2";
 import {withRouter} from "react-router-dom";
 import {compose} from "redux";
-
+  
 class Land extends Component {
 
   constructor(props) {
@@ -38,7 +38,7 @@ class Land extends Component {
     redirect.then((success) => {
       if (success) {
         this.onCloseModal();
-        this.props.history.push('/profile/edit');
+        this.props.history.push('/profile');
       }
     });
   };
