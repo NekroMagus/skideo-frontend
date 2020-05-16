@@ -4,7 +4,7 @@ import * as axios from 'axios';
 const getInstance = () => {
     // noinspection JSUnresolvedFunction
     return axios.create({
-        baseURL: 'http://194.31.52.136:8080/',
+        baseURL: 'http://82.148.19.115:8080/',
         headers: {
             "Authorization" : localStorage.getItem("token"),
             "Content-Type": "application/json"
