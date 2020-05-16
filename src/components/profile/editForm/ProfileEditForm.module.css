@@ -17,3 +17,6 @@
     transform: scale(0.95);
     outline: none;
 }
+.error {
+    color: red;
+}

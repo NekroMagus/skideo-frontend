@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import css from './Skideo.module.css';
 import {connect} from "react-redux";
 import ModalAuth from "../modalAuth/ModalAuth";
-import ModalVideo from "../modalVideo/ModalVideo";
+// import ModalVideo from "../modalVideo/ModalVideo";
 
 class Skideo extends Component {
 
@@ -49,9 +49,9 @@ class Skideo extends Component {
           <ModalAuth
               isModalShow={this.state.isModalAuthShow}
               toggleModalAuth={this.toggleModalAuth}/>
-          <ModalVideo
-              isModalVideoShow={this.state.isModalVideoShow}
-              toggleModalVideo={this.toggleVideoModal}/>
+          {/*<ModalVideo*/}
+          {/*    isModalVideoShow={this.state.isModalVideoShow}*/}
+          {/*    toggleModalVideo={this.toggleVideoModal}/>*/}
         </section>
     );
   }

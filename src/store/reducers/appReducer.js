@@ -1,4 +1,5 @@
 import {authenticate} from "./authReducer";
+import {getProfileData} from "./profileReducer";
 
 const SET_INITIALIZE = "SET_INITIALIZE";
 
@@ -25,6 +26,7 @@ export const initializeApp = () => (dispatch) => {
   if (token && token.startsWith("Bearer ")) {
     dispatch(initialize());
     dispatch(authenticate());
+    dispatch(getProfileData());
   }
   dispatch(initialize());
 };
