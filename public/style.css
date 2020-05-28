@@ -536,8 +536,8 @@ input[type=file] {
 }
 
 .profile-title {
-  border: 5px solid #C711AF;
-  color: #C711AF;
+  background:  #0247FF;
+  color: #fff;
   border-radius: 113px;
   padding: 5px 25px;
   font-size: 22px;

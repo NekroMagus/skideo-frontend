@@ -53,12 +53,16 @@ class Land extends Component {
     });
   };
 
+  onRedirectAfterAuth = () => {
+    this.props.history.push('/profile');
+  };
+
 
   render() {
     return (
         <>
           <HeaderFirst onOpenModal={this.onOpenModal}/>
-          <Skideo2 onOpenModal={this.onOpenModal}/>
+          <Skideo2 onOpenModal={this.onOpenModal} isAuth={this.props.isAuth} redirect={this.onRedirectAfterAuth}/>
           <Partners2/>
           <Dream2/>
           {

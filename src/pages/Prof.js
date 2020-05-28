@@ -59,10 +59,12 @@ class Prof extends Component {
                           </div>
 
                         </div>
-                        <div className="d-flex" style={{justifyContent: "space-between"}}>
-                          <h1 onClick={this.openModal} className="profile-title">добавить видео</h1>
+                        <div className={'text-center'}>
                           <NavLink className="profile_edit" to={"/profile/edit"}>Ред.
                             профиль</NavLink>
+                        </div>
+                        <div>
+                          <h1 onClick={this.openModal} className="profile-title">добавить видео</h1>
                         </div>
                       </div>
                       <div className="profile-container-body">
