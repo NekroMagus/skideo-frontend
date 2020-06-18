@@ -3,14 +3,15 @@ import Social from "../nav/social/Social";
 import css from './Footer.module.css';
 import Nav from "../nav/Nav";
 import Logo from "../nav/logo/Logo";
+import {connect} from "react-redux";
 
-const Footer = () => {
+const Footer = (props) => {
     return (
         <footer>
             <div className="container">
                 <Logo isBottom={true}/>
                 <div className={css.navbar}>
-                    <Nav/>
+                    <Nav language={props.language}/>
                 </div>
                 <Social isBottom={true}/>
             </div>
@@ -18,5 +19,9 @@ const Footer = () => {
     );
 };
 
+const mapStateToProps = state => ({
+  language: state.localize.language
+});
 
-export default Footer;
+
+export default connect(mapStateToProps)(Footer);

@@ -9,14 +9,29 @@ import Partners2 from "../components/landing/partners/Partners2";
 import Dream2 from "../components/landing/dream/Dream2";
 import {withRouter} from "react-router-dom";
 import {compose} from "redux";
+import {toggleLang} from "../store/reducers/localizeReducer";
+import landingLocalize from "../store/localize/landing";
+import commonLocalize from "../store/localize/common";
   
 class Land extends Component {
 
   constructor(props) {
     super(props);
     this.state = {
-      isModalOpen: false
+      isModalOpen: false,
+      language: this.props.language
     };
+    landingLocalize.setLanguage(this.props.language);
+    commonLocalize.setLanguage(this.props.language);
+  }
+
+  componentDidUpdate(prevProps, prevState, snapshot) {
+    if (prevProps.language !== this.props.language) {
+      this.setState({
+        ...this.props,
+        language: this.props.language
+      })
+    }
   }
 
   onOpenModal = () => {
@@ -57,13 +72,24 @@ class Land extends Component {
     this.props.history.push('/profile');
   };
 
+  onToggleLang = () => {
+    this.props.toggleLang(this.props.language);
+  };
+
 
   render() {
     return (
         <>
-          <HeaderFirst onOpenModal={this.onOpenModal}/>
-          <Skideo2 onOpenModal={this.onOpenModal} isAuth={this.props.isAuth} redirect={this.onRedirectAfterAuth}/>
-          <Partners2/>
+          <HeaderFirst onOpenModal={this.onOpenModal}
+                       toggleLang={this.onToggleLang}
+                       language={this.props.language}
+          />
+          <Skideo2 onOpenModal={this.onOpenModal}
+                   isAuth={this.props.isAuth}
+                   redirect={this.onRedirectAfterAuth}
+                   language={this.props.language}
+          />
+          <Partners2 language={this.props.language}/>
           <Dream2/>
           {
             this.props.isAuth ?
@@ -98,10 +124,11 @@ class Land extends Component {
 }
 
 const mapStateToProps = (state) => ({
-  isAuth: state.auth.isAuth
+  isAuth: state.auth.isAuth,
+  language: state.localize.language
 });
 
 export default compose(
     withRouter,
-    connect(mapStateToProps, {login, registration})
+    connect(mapStateToProps, {login, registration, toggleLang})
 )(Land);

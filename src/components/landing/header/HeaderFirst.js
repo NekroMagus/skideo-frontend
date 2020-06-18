@@ -5,6 +5,7 @@ import Nav from "../../common/nav/Nav";
 import Social from "../../common/nav/social/Social";
 import {connect} from "react-redux";
 import {logout} from "../../../store/reducers/authReducer";
+import commonLocalize from "../../../store/localize/common";
 
 class HeaderFirst extends Component {
 
@@ -12,8 +13,8 @@ class HeaderFirst extends Component {
     super(props);
     this.state = {
       isTop: true,
-      isModalOpen: false
-    }
+      isModalOpen: false,
+    };
   }
 
   componentDidMount() {
@@ -50,8 +51,6 @@ class HeaderFirst extends Component {
     this.props.logout();
   };
 
-
-
   render() {
     return (
         <header className={`${this.state.isTop ? css.top : css.headerBg}`}>
@@ -63,16 +62,16 @@ class HeaderFirst extends Component {
               <div className="hamburger-menu">
                 {
                   this.props.isAuth
-                    ? <button onClick={this.logout} className={"btn btn-register"}>Выйти</button>
+                    ? <button onClick={this.logout} className={"btn btn-register"}>{commonLocalize.exit}</button>
                     : <button onClick={this.props.onOpenModal}
-                              className="btn btn-register open-modal">Вход/Регистрация</button>
+                              className="btn btn-register open-modal">{commonLocalize.authButton}</button>
                 }
                 <div id="menu" className="hamburger-menu-list">
                   <ul className="navbar--list">
-                    <li className="navbar--list-item"><a href="#">Главная</a></li>
-                    <li className="navbar--list-item"><a href="#">Наши партнеры</a></li>
-                    <li className="navbar--list-item"><a href="#">Достижения</a></li>
-                    <li className="navbar--list-item"><a onClick={this.props.onOpenModal}>Регистрация</a></li>
+                    <li className="navbar--list-item"><a href="#">{commonLocalize.main}</a></li>
+                    <li className="navbar--list-item"><a href="#">{commonLocalize.partners}</a></li>
+                    <li className="navbar--list-item"><a href="#">{commonLocalize.achievements}</a></li>
+                    <li className="navbar--list-item"><a onClick={this.props.onOpenModal}>{commonLocalize.registration}</a></li>
                   </ul>
                 </div>
               </div>
@@ -80,14 +79,15 @@ class HeaderFirst extends Component {
 
             <div className={css.navbar}>
               <Logo/>
-              <Nav/>
+              <Nav language={this.state.language}/>
               <Social isBottom={false}/>
               {
                 this.props.isAuth
-                  ? <button onClick={this.logout} className={"btn btn-register display-none"}>Выйти</button>
+                  ? <button onClick={this.logout} className={"btn btn-register display-none"}>{commonLocalize.exit}</button>
                   : <button onClick={this.props.onOpenModal}
-                            className="btn btn-register open-modal diplay-none">Вход/Регистрация</button>
+                            className="btn btn-register open-modal diplay-none">{commonLocalize.authButton}</button>
               }
+              <div className={css.toggleLang} onClick={this.props.toggleLang}>ru/eng</div>
             </div>
           </div>
         </header>
