@@ -56,13 +56,14 @@ class HeaderFirst extends Component {
         <header className={`${this.state.isTop ? css.top : css.headerBg}`}>
           <div className="container">
             <div className={css.mobileMenu}>
+              <div className={css.toggleLangMobile} onClick={this.props.toggleLang}>ru/eng</div>
               <div onClick={this.toggleModal} id="hamburger" className="hamburger-icon-wrapper">
                 <span className="hamburger-icon"></span>
               </div>
               <div className="hamburger-menu">
                 {
                   this.props.isAuth
-                    ? <button onClick={this.logout} className={"btn btn-register"}>{commonLocalize.exit}</button>
+                    ? <button onClick={this.logout} className={"btn btn-register"}>{commonLocalize.logout}</button>
                     : <button onClick={this.props.onOpenModal}
                               className="btn btn-register open-modal">{commonLocalize.authButton}</button>
                 }
@@ -83,7 +84,7 @@ class HeaderFirst extends Component {
               <Social isBottom={false}/>
               {
                 this.props.isAuth
-                  ? <button onClick={this.logout} className={"btn btn-register display-none"}>{commonLocalize.exit}</button>
+                  ? <button onClick={this.logout} className={"btn btn-register display-none"}>{commonLocalize.logout}</button>
                   : <button onClick={this.props.onOpenModal}
                             className="btn btn-register open-modal diplay-none">{commonLocalize.authButton}</button>
               }

@@ -12,6 +12,7 @@ import {compose} from "redux";
 import {toggleLang} from "../store/reducers/localizeReducer";
 import landingLocalize from "../store/localize/landing";
 import commonLocalize from "../store/localize/common";
+import formLocalize from "../store/localize/form";
   
 class Land extends Component {
 
@@ -21,8 +22,6 @@ class Land extends Component {
       isModalOpen: false,
       language: this.props.language
     };
-    landingLocalize.setLanguage(this.props.language);
-    commonLocalize.setLanguage(this.props.language);
   }
 
   componentDidUpdate(prevProps, prevState, snapshot) {
@@ -87,9 +86,8 @@ class Land extends Component {
           <Skideo2 onOpenModal={this.onOpenModal}
                    isAuth={this.props.isAuth}
                    redirect={this.onRedirectAfterAuth}
-                   language={this.props.language}
           />
-          <Partners2 language={this.props.language}/>
+          <Partners2/>
           <Dream2/>
           {
             this.props.isAuth ?
@@ -104,15 +102,15 @@ class Land extends Component {
                     </a>
                     <div className="tabs">
                       <input type="radio" name="inset" value="" id="tab_1" checked/>
-                      <label className="l-center" htmlFor="tab_1">Вход</label>
+                      <label className="l-center" htmlFor="tab_1">{formLocalize.auth}</label>
 
                       <input type="radio" name="inset" value="" id="tab_2"/>
-                      <label htmlFor="tab_2">Регистрация</label>
+                      <label htmlFor="tab_2">{formLocalize.registration}</label>
                       <div id="txt_1">
-                        <AuthForm onSubmit={this.onSubmitAuth}/>
+                        <AuthForm onSubmit={this.onSubmitAuth} language={this.props.language}/>
                       </div>
                       <div id="txt_2">
-                        <RegistrationForm onSubmit={this.onSubmitRegistration}/>
+                        <RegistrationForm onSubmit={this.onSubmitRegistration} language={this.props.language}/>
                       </div>
                     </div>
                   </div>

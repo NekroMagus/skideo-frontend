@@ -1,5 +1,6 @@
 import landingLocalize from "../localize/landing";
 import commonLocalize from "../localize/common";
+import formLocalize from "../localize/form";
 
 const RU_LOCAL = "ru";
 const ENG_LOCAL = 'eng';
@@ -11,6 +12,10 @@ if(!localize) {
   localStorage.setItem('language', 'ru');
 }
 
+landingLocalize.setLanguage(localize);
+commonLocalize.setLanguage(localize);
+formLocalize.setLanguage(localize);
+
 const initState = {
   language: localize
 };
@@ -20,6 +25,7 @@ const localizeReducer = (state = initState, action) => {
     case RU_LOCAL:
       localStorage.setItem('language',RU_LOCAL);
       landingLocalize.setLanguage(RU_LOCAL);
+      formLocalize.setLanguage(RU_LOCAL);
       commonLocalize.setLanguage(RU_LOCAL);
       return {
         language: RU_LOCAL
@@ -28,6 +34,7 @@ const localizeReducer = (state = initState, action) => {
       localStorage.setItem('language',ENG_LOCAL);
       landingLocalize.setLanguage(ENG_LOCAL);
       commonLocalize.setLanguage(ENG_LOCAL);
+      formLocalize.setLanguage(ENG_LOCAL);
       return {
         language: ENG_LOCAL
       };
