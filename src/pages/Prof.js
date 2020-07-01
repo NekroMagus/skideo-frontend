@@ -7,12 +7,13 @@ import {withAuthRedirect} from "../hoc/withAuthRedirect";
 import logo from '../static/img/avatar.jpg';
 import ModalVideo from "../components/common/modalVideo/ModalVideo";
 import {addVideo} from "../store/reducers/profileReducer";
+import profileLocalize from "../store/localize/profile";
 
 class Prof extends Component {
 
   constructor(props) {
     super(props);
-    this.state ={isModalOpen: false}
+    this.state = {isModalOpen: false}
   }
 
   openModal = () => {
@@ -27,10 +28,10 @@ class Prof extends Component {
     })
   };
 
-  submitVideo = (video)  => {
+  submitVideo = (video) => {
     const result = this.props.addVideo(video);
     result.then(data => {
-      if(data) {
+      if (data) {
         this.closeModal();
       }
     })
@@ -53,8 +54,9 @@ class Prof extends Component {
                           <img src={logo} alt=""/>
                           {/*<button className="edit_photo open-modal2">Ред.фото</button>*/}
                           <div className="profile_inicial">
-                            <h2 className="profile_name">Имя
-                              Фамилия: {this.props.profile.name} {this.props.profile.surname}</h2>
+                            <h2 className="profile_name">
+                              {profileLocalize.firstName} {profileLocalize.lastName}: {this.props.profile.name} {this.props.profile.surname}
+                            </h2>
                             <p className="profile_country">Город: {this.props.profile.city}</p>
                           </div>
 
@@ -164,7 +166,7 @@ class Prof extends Component {
             </div>
           </section>
 
-          <ModalVideo isModalOpen ={this.state.isModalOpen}
+          <ModalVideo isModalOpen={this.state.isModalOpen}
                       submitVideo={this.submitVideo}
                       closeModal={this.closeModal}
           />
