@@ -8,12 +8,15 @@ import logo from '../static/img/avatar.jpg';
 import ModalVideo from "../components/common/modalVideo/ModalVideo";
 import {addVideo} from "../store/reducers/profileReducer";
 import profileLocalize from "../store/localize/profile";
+import landingLocalize from "../store/localize/landing";
 
 class Prof extends Component {
 
   constructor(props) {
     super(props);
-    this.state = {isModalOpen: false}
+    this.state = {
+      isModalOpen: false,
+    }
   }
 
   openModal = () => {
@@ -57,16 +60,19 @@ class Prof extends Component {
                             <h2 className="profile_name">
                               {profileLocalize.firstName} {profileLocalize.lastName}: {this.props.profile.name} {this.props.profile.surname}
                             </h2>
-                            <p className="profile_country">Город: {this.props.profile.city}</p>
+                            <p className="profile_country">{profileLocalize.city}: {this.props.profile.city}</p>
                           </div>
 
                         </div>
                         <div className={'text-center'}>
-                          <NavLink className="profile_edit" to={"/profile/edit"}>Ред.
-                            профиль</NavLink>
+                          <NavLink className="profile_edit" to={"/profile/edit"}>
+                            {profileLocalize.editProfile}
+                          </NavLink>
                         </div>
                         <div>
-                          <h1 onClick={this.openModal} className="profile-title">добавить видео</h1>
+                          <h1 onClick={this.openModal} className="profile-title">
+                            {landingLocalize.addVideo}
+                          </h1>
                         </div>
                       </div>
                       <div className="profile-container-body">
@@ -74,7 +80,7 @@ class Prof extends Component {
                           <div className="blockoutput">
                             <div className="col-6 col-md-6">
                               <div className="input-group-prepend">
-                                <p>Амплуа:</p>
+                                <p>{profileLocalize.position}:</p>
                               </div>
                             </div>
                             <div className="col-4">
@@ -94,7 +100,7 @@ class Prof extends Component {
                           <div className="blockoutput">
                             <div className="col-6 col-md-6">
                               <div className="input-group-prepend">
-                                <p>Телефон:</p>
+                                <p>{profileLocalize.phoneNumber}:</p>
                               </div>
                             </div>
                             <div className="col-4">
@@ -104,7 +110,7 @@ class Prof extends Component {
                           <div className="blockoutput">
                             <div className="col-6 col-md-6">
                               <div className="input-group-prepend">
-                                <p>Дата рождения:</p>
+                                <p>{profileLocalize.birthday}:</p>
                               </div>
                             </div>
                             <div className="col-4">
@@ -120,7 +126,7 @@ class Prof extends Component {
                           <div className="blockoutput">
                             <div className="col-6 col-md-6">
                               <div className="input-group-prepend">
-                                <p>Страна:</p>
+                                <p>{profileLocalize.country}:</p>
                               </div>
                             </div>
                             <div className="col-4">
@@ -130,7 +136,7 @@ class Prof extends Component {
                           <div className="blockoutput">
                             <div className="col-6 col-md-6">
                               <div className="input-group-prepend">
-                                <p>Город:</p>
+                                <p>{profileLocalize.city}:</p>
                               </div>
                             </div>
                             <div className="col-4">
@@ -140,7 +146,7 @@ class Prof extends Component {
                           <div className="blockoutput">
                             <div className="col-6 col-md-6">
                               <div className="input-group-prepend">
-                                <p>Вы в соц. сети:</p>
+                                <p>{profileLocalize.socialNetwork}:</p>
                               </div>
                             </div>
                             <div className="col-4">
@@ -155,7 +161,7 @@ class Prof extends Component {
                 <div className="col-md-3">
                   <div className="btn-videos">
                     <NavLink to={"/profile/video"}>
-                      <p className="btn-text">Мои видео</p>
+                      <p className="btn-text">{profileLocalize.myVideos}</p>
                       <div className="circle">
                         <div className="triangle"></div>
                       </div>
@@ -176,7 +182,8 @@ class Prof extends Component {
 }
 
 const mapStateToProps = state => ({
-  profile: state.profile
+  profile: state.profile,
+  language: state.localize.language
 });
 
 export default compose(

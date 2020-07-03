@@ -2,6 +2,7 @@ import React from 'react';
 import {Field, reduxForm} from "redux-form";
 import FormControl from "../form-control/formControl";
 import {requiredField} from "../../../utils/validator/Validator";
+import profileLocalize from "../../../store/localize/profile";
 
 
 const Input = FormControl('input');
@@ -13,11 +14,11 @@ const VideoForm = (props) => {
             component={Input}
             type="text"
             name={"video"}
-            placeholder="Видео на youtube"
+            placeholder={profileLocalize.linkToYoutube}
             validate={[requiredField]}
         />
         <div className="push20"></div>
-        <button className="btn">Добавить</button>
+        <button className="btn">{profileLocalize.add}</button>
       </form>
   );
 };

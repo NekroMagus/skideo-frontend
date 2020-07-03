@@ -34,3 +34,14 @@
     display: none;
   }
 }
+
+.toggleLang {
+  padding-left: 20px;
+  cursor: pointer;
+}
+
+.toggleLangMobile {
+  padding-right: 20px;
+  padding-top: 10px;
+  cursor: pointer;
+}

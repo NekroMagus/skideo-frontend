@@ -6,6 +6,7 @@ import {setProfileData} from "../store/reducers/profileReducer";
 import {withRouter} from "react-router-dom";
 import {compose} from "redux";
 import {withAuthRedirect} from "../hoc/withAuthRedirect";
+import profileLocalize from "../store/localize/profile";
 
 class ProfEdit extends Component {
 
@@ -25,7 +26,7 @@ class ProfEdit extends Component {
           <section className="edit">
             <div className="container center">
               <div className="col-md-6 no-padding">
-                <h1 className="edit-title">Основное</h1>
+                <h1 className="edit-title">{profileLocalize.general}</h1>
                 <ProfileEditForm onSubmit={this.onSubmitForm}/>
               </div>
             </div>

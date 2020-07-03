@@ -5,6 +5,8 @@ import Social from "../nav/social/Social";
 import css from './HeaderSecond.module.css';
 import {connect} from "react-redux";
 import {logout} from "../../../store/reducers/authReducer";
+import commonLocalize from "../../../store/localize/common";
+import {toggleLang} from "../../../store/reducers/localizeReducer";
 
 class HeaderSecond extends Component {
 
@@ -40,7 +42,9 @@ class HeaderSecond extends Component {
     }
   };
 
-
+    onToggleLang = () => {
+      this.props.toggleLang(this.props.language);
+    };
 
   logout = () => {
     this.props.logout();
@@ -51,20 +55,21 @@ class HeaderSecond extends Component {
         <header className={this.state.isTop ? "" : css.scrollMenu}>
           <div className="container">
             <div className={css.mobileMenu}>
+              <div className={css.toggleLangMobile} onClick={this.onToggleLang}>ru/eng</div>
               <div onClick={this.toggleModal} id="hamburger" className="hamburger-icon-wrapper">
                 <span className="hamburger-icon"></span>
               </div>
               <div className="hamburger-menu">
                 {
                   this.props.isAuth
-                    ? <button onClick={this.logout} className={"btn btn-register"}>Выйти</button>
-                    : <button className="btn btn-register open-modal">Вход/Регистрация</button>
+                    ? <button onClick={this.logout} className={"btn btn-register"}>{commonLocalize.logout}</button>
+                    : <button className="btn btn-register open-modal">{commonLocalize.authButton}</button>
                 }
                 <div id="menu" className="hamburger-menu-list">
                   <ul className="navbar--list">
-                    <li className="navbar--list-item"><a href="#">Главная</a></li>
-                    <li className="navbar--list-item"><a href="#">Наши партнеры</a></li>
-                    <li className="navbar--list-item"><a href="#">Достижения</a></li>
+                    <li className="navbar--list-item"><a href="#">{commonLocalize.main}</a></li>
+                    <li className="navbar--list-item"><a href="#">{commonLocalize.partners}</a></li>
+                    <li className="navbar--list-item"><a href="#">{commonLocalize.achievements}</a></li>
                   </ul>
                 </div>
               </div>
@@ -75,9 +80,10 @@ class HeaderSecond extends Component {
               <Nav/>
               <Social isBottom={false}/>
               {this.props.isAuth
-                  ? <button onClick={this.logout} className={"btn btn-register diplay-none"}>Выйти</button>
-                  : <button className="btn btn-register open-modal diplay-none">Вход/Регистрация</button>
+                  ? <button onClick={this.logout} className={"btn btn-register diplay-none"}>{commonLocalize.logout}</button>
+                  : <button className="btn btn-register open-modal diplay-none">{commonLocalize.authButton}</button>
               }
+              <div className={css.toggleLang} onClick={this.onToggleLang}>ru/eng</div>
             </div>
           </div>
         </header>
@@ -86,7 +92,8 @@ class HeaderSecond extends Component {
 }
 
 const mapStateToProps = state => ({
-  isAuth: state.auth.isAuth
+  isAuth: state.auth.isAuth,
+  language: state.localize.language
 });
 
-export default connect(mapStateToProps, {logout})(HeaderSecond);
+export default connect(mapStateToProps, {logout, toggleLang})(HeaderSecond);

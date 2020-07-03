@@ -10,8 +10,6 @@ import Dream2 from "../components/landing/dream/Dream2";
 import {withRouter} from "react-router-dom";
 import {compose} from "redux";
 import {toggleLang} from "../store/reducers/localizeReducer";
-import landingLocalize from "../store/localize/landing";
-import commonLocalize from "../store/localize/common";
 import formLocalize from "../store/localize/form";
   
 class Land extends Component {
@@ -22,15 +20,6 @@ class Land extends Component {
       isModalOpen: false,
       language: this.props.language
     };
-  }
-
-  componentDidUpdate(prevProps, prevState, snapshot) {
-    if (prevProps.language !== this.props.language) {
-      this.setState({
-        ...this.props,
-        language: this.props.language
-      })
-    }
   }
 
   onOpenModal = () => {

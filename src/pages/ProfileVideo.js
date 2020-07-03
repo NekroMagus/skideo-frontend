@@ -4,6 +4,7 @@ import {NavLink} from "react-router-dom";
 import {connect} from "react-redux";
 import {compose} from "redux";
 import {withAuthRedirect} from "../hoc/withAuthRedirect";
+import profileLocalize from "../store/localize/profile";
 
 class ProfileVideo extends Component {
   render() {
@@ -12,9 +13,9 @@ class ProfileVideo extends Component {
           <HeaderSecond/>
           <section className="text-center" style={{"paddingBottom": "100px", "paddingTop": "100px"}}>
             <div className="container">
-              <h1 className="" style={{"color": "#000"}}>Мои видео</h1>
+              <h1 className="" style={{"color": "#000"}}>{profileLocalize.myVideos}</h1>
               <div className="push20"></div>
-              {this.props.video ? null :  <p style={{"color": "#000"}}>Вы еще не добавили видео.</p>}
+              {this.props.video ? null :  <p style={{"color": "#000"}}>{profileLocalize.didntAdd}</p>}
               <div className="row">
                 <div className="col">
                   {
@@ -30,7 +31,7 @@ class ProfileVideo extends Component {
                 </div>
               </div>
               <div className="push20"></div>
-              <NavLink to={"/profile"} className="btn open-modal2">Назад в профиль</NavLink>
+              <NavLink to={"/profile"} className="btn open-modal2">{profileLocalize.backToProfile}</NavLink>
               <div className="push20"></div>
             </div>
 

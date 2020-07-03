@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import VideoForm from "./VideoForm";
 import {connect} from "react-redux";
 import {addVideo} from "../../../store/reducers/profileReducer";
+import landingLocalize from "../../../store/localize/landing";
 
 class ModalVideo extends Component {
   render() {
@@ -18,7 +19,7 @@ class ModalVideo extends Component {
               </svg>
             </a>
             <div className="modal-content2 text-center">
-              <h2>Добавить видео</h2>
+              <h2>{landingLocalize.addVideo}</h2>
               <div className="push20"></div>
               <VideoForm onSubmit={this.props.submitVideo}/>
             </div>

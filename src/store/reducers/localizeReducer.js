@@ -16,6 +16,7 @@ if (!localize) {
 landingLocalize.setLanguage(localize);
 commonLocalize.setLanguage(localize);
 formLocalize.setLanguage(localize);
+profileLocalize.setLanguage(localize);
 
 const initState = {
   language: localize

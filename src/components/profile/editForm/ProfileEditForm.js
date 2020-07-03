@@ -6,6 +6,7 @@ import normalizePhone from "../../../utils/validator/normilizePhone";
 import {connect} from "react-redux";
 import {compose} from "redux";
 import {requiredField} from "../../../utils/validator/Validator";
+import profileLocalize from "../../../store/localize/profile";
 
 const Input = FormControl("input");
 
@@ -17,20 +18,20 @@ const ProfileEditForm = (props) => {
           <div className="input edit">
             <div className="blockinput">
               <div className="col-4 col-md-4">
-                <p>Имя:</p>
+                <p>{profileLocalize.firstName}:</p>
               </div>
               <div className="col-8">
                 <Field component={Input}
-                       placeholder={"Ваше имя"}
+                       placeholder={profileLocalize.firstName}
                        name={"name"}/>
               </div>
             </div>
             <div className="blockinput">
               <div className="col-4 col-md-4">
-                <p>Фамилия:</p>
+                <p>{profileLocalize.lastName}:</p>
               </div>
               <div className="col-8">
-                <Field component={Input} placeholder={"Ваша фамилия"} name={"surname"}/>
+                <Field component={Input} placeholder={profileLocalize.lastName} name={"surname"}/>
               </div>
             </div>
             {/*<div className="blockinput">*/}
@@ -49,7 +50,7 @@ const ProfileEditForm = (props) => {
               <div className="col-4 col-md-4">
                 <div className="input-group-prepend">
                   <label className="input-group-text" htmlFor="inputGroupSelect01">
-                    <p>Амплуа:</p>
+                    <p>{profileLocalize.position}:</p>
                   </label>
                 </div>
               </div>
@@ -81,24 +82,24 @@ const ProfileEditForm = (props) => {
             </div>
             <div className="blockinput">
               <div className="col-4 col-md-4">
-                <p>E-mail:</p>
+                <p>{profileLocalize.email}:</p>
               </div>
               <div className="col-8">
                 <Field
                     component={Input}
                     type="email"
                     name="email"
-                    placeholder="Ваш E-mail"/>
+                    placeholder={profileLocalize.email}/>
               </div>
             </div>
             <div className="blockinput">
               <div className="col-4 col-md-4">
-                <p>Телефон:</p>
+                <p>{profileLocalize.phoneNumber}:</p>
               </div>
               <div className="col-8">
                 <Field component={"input"}
                        type={"text"}
-                       placeholder={"Ваш телефон"}
+                       placeholder={profileLocalize.phoneNumber}
                        name={"telephoneNumber"}
                        normalize={normalizePhone}
                 />
@@ -106,44 +107,44 @@ const ProfileEditForm = (props) => {
             </div>
             <div className="blockinput">
               <div className="col-4 col-md-4">
-                <p>Дата рождения:</p>
+                <p>{profileLocalize.birthday}:</p>
               </div>
               <div className="col-8">
                 <Field component={"input"}
                        type={"date"}
                        name="dateOfBirth"
                        validate={requiredField}
-                       placeholder="Дата рождения"/>
+                       placeholder={profileLocalize.birthday}/>
               </div>
             </div>
             <div className="blockinput">
               <div className="col-4 col-md-4">
-                <p>Страна:</p>
+                <p>{profileLocalize.country}:</p>
               </div>
               <div className="col-8">
-                <Field component={Input} placeholder={"Ваша страна"} name={"country"}/>
+                <Field component={Input} placeholder={profileLocalize.country} name={"country"}/>
               </div>
             </div>
             <div className="blockinput">
               <div className="col-4 col-md-4">
-                <p>Город:</p>
+                <p>{profileLocalize.city}:</p>
               </div>
               <div className="col-8">
-                <Field component={Input} placeholder={"Ваш город"} name={"city"}/>
+                <Field component={Input} placeholder={profileLocalize.city} name={"city"}/>
               </div>
             </div>
             <div className="blockinput">
               <div className="col-4 col-md-4">
-                <p>Вы в соц. сети:</p>
+                <p>{profileLocalize.socialNetwork}:</p>
               </div>
               <div className="col-8">
-                <Field component={Input} placeholder={"Ваша соц. сеть"} name={"socialNetwork"}/>
+                <Field component={Input} placeholder={profileLocalize.socialNetwork} name={"socialNetwork"}/>
               </div>
             </div>
           </div>
           <div className="push20"></div>
           <div className="text-center">
-            <button type="submit" className="btn btn-save">Сохранить</button>
+            <button type="submit" className="btn btn-save">{profileLocalize.save}</button>
           </div>
         </form>
       </>
