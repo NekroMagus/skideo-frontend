@@ -1,6 +1,7 @@
 import {authAPI} from "../../api/api";
 import {stopSubmit} from "redux-form";
 import {getProfileData, removeProfile} from "./profileReducer";
+import formLocalize from "../localize/form";
 
 const AUTH = "AUTH";
 const SUBMIT_FORM_IN_PROGRESS = "SUBMIT_FORM_IN_PROGRESS";
@@ -43,7 +44,7 @@ export const login = (login, password) => (dispatch) => {
       })
       .catch(error => {
         if (error.response && (error.response.status === 404 || error.response.status === 401)) {
-          dispatch(stopSubmit("login", {_error: "Логин или пароль неверны"}))
+          dispatch(stopSubmit("login", {_error: formLocalize.loginError}))
         }
       });
 };
@@ -58,7 +59,7 @@ export const registration = (login, password) => (dispatch) => {
       })
       .catch(error => {
         if (error.response && error.response.status === 422) {
-          dispatch(stopSubmit("registration", {_error: "Пользователь с таким логином уже существует"}))
+          dispatch(stopSubmit("registration", {_error: formLocalize.loginExists}))
         }
       })
 };
