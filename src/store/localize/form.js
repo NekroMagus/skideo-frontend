@@ -8,7 +8,7 @@ const formLocalize = new LocalizedStrings({
     password: "Password",
     enterLogin: "Enter login*",
     enterPassword: "Enter password*",
-    requiredFields: "required fields",
+    requiredFields: "Required fields",
     rulesAndPrivacy: "Rules and Privacy",
   },
   ru: {
