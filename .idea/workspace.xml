@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="5554e058-6039-4bab-8774-1af76b1518b1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/packages/main/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dmt/static/images/011-min.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/dmt/static/images/011-min.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dmt/static/images/403.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/dmt/static/images/403.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dmt/static/images/500.png" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/dmt/static/images/500.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dmt/static/images/886959.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/dmt/static/images/886959.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dmt/static/images/Juventus.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/dmt/static/images/Juventus.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dmt/static/images/Liverpool.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/dmt/static/images/Liverpool.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dmt/static/images/Real_madrid.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/dmt/static/images/Real_madrid.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dmt/static/images/bg-404.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/dmt/static/images/bg-404.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dmt/static/images/gpnAt4bdfu4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/dmt/static/images/gpnAt4bdfu4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dmt/static/images/index.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/dmt/static/images/index.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dmt/static/images/ixHpuuFUPdQ.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/dmt/static/images/ixHpuuFUPdQ.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dmt/static/images/kick-white.png" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/dmt/static/images/kick-white.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dmt/static/images/kick.png" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/dmt/static/images/kick.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dmt/static/images/poco-euro-rite-u11-soccer-game-3-960x640-1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/dmt/static/images/poco-euro-rite-u11-soccer-game-3-960x640-1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dmt/static/images/poco-euro-rite-u11-soccer-game-3-960x640.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/dmt/static/images/poco-euro-rite-u11-soccer-game-3-960x640.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dmt/temlates/403.html" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/dmt/temlates/403.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dmt/temlates/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/dmt/temlates/404.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dmt/temlates/500.html" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/dmt/temlates/500.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dmt/temlates/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/dmt/temlates/edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dmt/temlates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/dmt/temlates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dmt/temlates/my-video.html" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/dmt/temlates/my-video.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dmt/temlates/recovery-email.html" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/dmt/temlates/recovery-email.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dmt/temlates/recovery.html" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/dmt/temlates/recovery.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dmt/temlates/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/dmt/temlates/search.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dmt/temlates/thank.html" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/dmt/temlates/thank.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dmt/temlates/verification.html" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/dmt/temlates/verification.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/bootstrap-grid.css" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/public/bootstrap-grid.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/bootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/public/bootstrap.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dropdown.css" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/public/dropdown.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/jquery-3.1.1.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/public/jquery-3.1.1.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/jquery-ui.css" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/public/jquery-ui.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/jquery-ui.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/public/jquery-ui.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/public/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/search.css" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/public/search.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/public/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tabs.css" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/public/tabs.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/src/App.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/src/api/api.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/footer/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/src/components/common/footer/Footer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/footer/Footer.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/src/components/common/footer/Footer.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/form-control/FormControl.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/src/components/common/form-control/FormControl.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/form-control/formControl.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/src/components/common/form-control/formControl.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/header-another/HeaderSecond.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/src/components/common/header-another/HeaderSecond.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/header-another/HeaderSecond.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/src/components/common/header-another/HeaderSecond.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/src/components/common/header/Header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/header/Header.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/src/components/common/header/Header.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/modalButton/ModalButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/src/components/common/modalButton/ModalButton.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/modalVideo/ModalVideo.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/src/components/common/modalVideo/ModalVideo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/modalVideo/VideoForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/src/components/common/modalVideo/VideoForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/nav/Nav.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/src/components/common/nav/Nav.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/nav/Nav.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/src/components/common/nav/Nav.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/nav/logo/Logo.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/src/components/common/nav/logo/Logo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/nav/logo/Logo.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/src/components/common/nav/logo/Logo.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/nav/social/Social.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/src/components/common/nav/social/Social.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/nav/social/Social.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/src/components/common/nav/social/Social.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/landing/block-title/BlockTitle.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/src/components/landing/block-title/BlockTitle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/landing/block-title/BlockTitle.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/src/components/landing/block-title/BlockTitle.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/landing/dream/Dream.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/src/components/landing/dream/Dream.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/landing/dream/Dream.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/src/components/landing/dream/Dream.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/landing/dream/Dream2.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/src/components/landing/dream/Dream2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/landing/header/HeaderFirst.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/src/components/landing/header/HeaderFirst.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/landing/header/HeaderFirst.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/src/components/landing/header/HeaderFirst.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/landing/modalAuth/AuthForm/AuthForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/src/components/landing/modalAuth/AuthForm/AuthForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/landing/modalAuth/ModalAuth.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/src/components/landing/modalAuth/ModalAuth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/landing/modalAuth/ModalAuth.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/src/components/landing/modalAuth/ModalAuth.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/landing/modalAuth/RegistrationForm/RegistrationForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/src/components/landing/modalAuth/RegistrationForm/RegistrationForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/landing/modalVideo/ModalVideo.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/src/components/landing/modalVideo/ModalVideo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/landing/modalVideo/ModalVideo.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/src/components/landing/modalVideo/ModalVideo.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/landing/modalVideo/ModalVideoForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/src/components/landing/modalVideo/ModalVideoForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/landing/partners/Partners.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/src/components/landing/partners/Partners.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/landing/partners/Partners.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/src/components/landing/partners/Partners.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/landing/partners/Partners2.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/src/components/landing/partners/Partners2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/landing/skideo/Skideo.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/src/components/landing/skideo/Skideo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/landing/skideo/Skideo.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/src/components/landing/skideo/Skideo.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/landing/skideo/Skideo2.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/src/components/landing/skideo/Skideo2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/landing/skideo/Skideo2.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/src/components/landing/skideo/Skideo2.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/profile/avatar/Avatar.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/src/components/profile/avatar/Avatar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/profile/avatar/Avatar.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/src/components/profile/avatar/Avatar.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/profile/editForm/ProfileEditForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/src/components/profile/editForm/ProfileEditForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/profile/editForm/ProfileEditForm.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/src/components/profile/editForm/ProfileEditForm.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/profile/info/ProfileData.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/src/components/profile/info/ProfileData.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/profile/info/ProfileData.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/src/components/profile/info/ProfileData.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hoc/withAuthRedirect.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/src/hoc/withAuthRedirect.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Land.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/src/pages/Land.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Landing.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/src/pages/Landing.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Prof.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/src/pages/Prof.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/ProfEdit.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/src/pages/ProfEdit.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/src/pages/Profile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/ProfileEdit.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/src/pages/ProfileEdit.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/ProfileVideo.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/src/pages/ProfileVideo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/serviceWorker.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/src/serviceWorker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/img/011-min.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/src/static/img/011-min.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/img/Juventus.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/src/static/img/Juventus.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/img/Liverpool.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/src/static/img/Liverpool.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/img/Real_madrid.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/src/static/img/Real_madrid.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/img/avatar.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/src/static/img/avatar.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/img/fb.png" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/src/static/img/fb.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/img/index.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/src/static/img/index.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/img/inst.png" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/src/static/img/inst.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/img/kick-white.png" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/src/static/img/kick-white.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/img/kick.png" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/src/static/img/kick.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/img/poco-euro-rite-u11-soccer-game-3-960x640-1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/src/static/img/poco-euro-rite-u11-soccer-game-3-960x640-1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/img/vk.png" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/src/static/img/vk.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/localize/common.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/src/store/localize/common.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/localize/form.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/src/store/localize/form.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/localize/landing.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/src/store/localize/landing.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/localize/profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/src/store/localize/profile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/reducers/appReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/src/store/reducers/appReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/reducers/authReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/src/store/reducers/authReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/reducers/localizeReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/src/store/reducers/localizeReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/reducers/profileReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/src/store/reducers/profileReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/src/store/store.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/validator/Validator.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/src/utils/validator/Validator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/validator/normilizePhone.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/src/utils/validator/normilizePhone.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/packages/main/yarn.lock" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="skideo-frontend" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1ZqHt1YZQD7C0GebnCyPOmTWyLf" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/packages/club/node_modules" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs_package_manager_path" value="yarn" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.deploy.options" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2019.2.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+    <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/dmt/temlates/index2.html" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\fli_i.LAPTOP-F81S9FK5\WebstormProjects\skideo-frontend\packages\main" />
+      <recent name="C:\Users\fli_i.LAPTOP-F81S9FK5\WebstormProjects\skideo-frontend\packages\club" />
+      <recent name="C:\Users\fli_i.LAPTOP-F81S9FK5\WebstormProjects\skideo-frontend\dmt\temlates" />
+      <recent name="C:\Users\fli_i.LAPTOP-F81S9FK5\WebstormProjects\skideo-frontend\src\static\img" />
+      <recent name="C:\Users\fli_i.LAPTOP-F81S9FK5\WebstormProjects\skideo-frontend\public" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="npm.club">
+    <configuration name="club" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/packages/club/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="main" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/packages/main/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="npm.club" />
+      <item itemvalue="npm.main" />
+    </list>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="allServicesViewState">
+      <serviceView>
+        <treeState>
+          <expand />
+          <select />
+        </treeState>
+      </serviceView>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5554e058-6039-4bab-8774-1af76b1518b1" name="Default Changelist" comment="" />
+      <created>1585559916389</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1585559916389</updated>
+      <workItem from="1585559930968" duration="38000" />
+      <workItem from="1585992518169" duration="12958000" />
+      <workItem from="1586157528870" duration="3949000" />
+      <workItem from="1586241733716" duration="17616000" />
+      <workItem from="1586415117725" duration="295000" />
+      <workItem from="1586779917301" duration="3588000" />
+      <workItem from="1587038225870" duration="732000" />
+      <workItem from="1587039815486" duration="1204000" />
+      <workItem from="1587041052563" duration="8196000" />
+      <workItem from="1587049359984" duration="2015000" />
+      <workItem from="1587282530467" duration="31812000" />
+      <workItem from="1587624781259" duration="23922000" />
+      <workItem from="1587895020164" duration="1188000" />
+      <workItem from="1587917967151" duration="10383000" />
+      <workItem from="1587928459074" duration="58000" />
+      <workItem from="1588401957003" duration="1621000" />
+      <workItem from="1588778752112" duration="164000" />
+      <workItem from="1589359741363" duration="2500000" />
+      <workItem from="1589603544089" duration="2828000" />
+      <workItem from="1589606661400" duration="12000" />
+      <workItem from="1589606694309" duration="5000" />
+      <workItem from="1589870623684" duration="1309000" />
+      <workItem from="1590139296285" duration="1012000" />
+      <workItem from="1590479811596" duration="3093000" />
+      <workItem from="1591792695981" duration="287000" />
+      <workItem from="1592465996211" duration="17511000" />
+      <workItem from="1592678910360" duration="400000" />
+      <workItem from="1593598762087" duration="1589000" />
+      <workItem from="1593764549481" duration="6636000" />
+      <workItem from="1594279871612" duration="1772000" />
+      <workItem from="1594655751973" duration="55000" />
+      <workItem from="1596697177109" duration="3306000" />
+      <workItem from="1598335567872" duration="9286000" />
+    </task>
+    <task id="LOCAL-00001" summary="added profile edit page">
+      <created>1586006595947</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1586006595947</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Many changes, i don't like, but customer want it... Pls refactor this!!!">
+      <created>1587671005619</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1587671005619</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Many changes, i don't like, but customer want it... Pls refactor this!!!">
+      <created>1587671161906</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1587671161906</updated>
+    </task>
+    <task id="LOCAL-00004" summary="added video">
+      <created>1587715963907</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1587715963907</updated>
+    </task>
+    <task id="LOCAL-00005" summary="it's mvp version, but i need to fix many bugs O_o">
+      <created>1587928513661</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1587928513661</updated>
+    </task>
+    <task id="LOCAL-00006" summary="auth now redirect to profile">
+      <created>1588404706007</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1588404706007</updated>
+    </task>
+    <task id="LOCAL-00007" summary="changed button, added https">
+      <created>1590480777307</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1590480777307</updated>
+    </task>
+    <task id="LOCAL-00008" summary="add localization">
+      <created>1592484896092</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1592484896092</updated>
+    </task>
+    <task id="LOCAL-00009" summary="added localization">
+      <created>1592492337977</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1592492337977</updated>
+    </task>
+    <task id="LOCAL-00010" summary="added profile localize">
+      <created>1593601626199</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1593601626199</updated>
+    </task>
+    <task id="LOCAL-00011" summary="finished localize">
+      <created>1593771965480</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1593771965481</updated>
+    </task>
+    <task id="LOCAL-00012" summary="changed text">
+      <created>1594280272818</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1594280272818</updated>
+    </task>
+    <task id="LOCAL-00013" summary="added new text localize">
+      <created>1594281055351</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1594281055351</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+    <option name="exactExcludedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/packages/main/node_modules/wait-for-expect/lib/index.d.js" />
+        <option value="$PROJECT_DIR$/packages/main/node_modules/wait-for-expect/lib/toBeInRangeMatcher.d.js" />
+        <option value="$PROJECT_DIR$/packages/main/node_modules/wait-for-expect/lib/waitForExpect.spec.d.js" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="added profile edit page" />
+    <MESSAGE value="Many changes, i don't like, but customer want it... Pls refactor this!!!" />
+    <MESSAGE value="added video" />
+    <MESSAGE value="it's mvp version, but i need to fix many bugs O_o" />
+    <MESSAGE value="auth now redirect to profile" />
+    <MESSAGE value="changed button, added https" />
+    <MESSAGE value="add localization" />
+    <MESSAGE value="added localization" />
+    <MESSAGE value="added profile localize" />
+    <MESSAGE value="finished localize" />
+    <MESSAGE value="changed text" />
+    <MESSAGE value="added new text localize" />
+    <option name="LAST_COMMIT_MESSAGE" value="added new text localize" />
+  </component>
+</project>

@@ -11,9 +11,6 @@
 # production
 /build
 
-.idea
-skideo_net
-
 # misc
 .DS_Store
 .env.local
