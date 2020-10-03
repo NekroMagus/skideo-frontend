@@ -1,0 +1,19 @@
+.video {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 50px;
+  height: 100%;
+  width: 100%;
+
+  &__button {
+    margin: 50px;
+    padding: 12px 25px;
+    line-height: 1.5;
+    border-radius: 46px;
+    cursor: pointer;
+    background-color: #00bfff;
+  }
+}

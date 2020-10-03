@@ -1,26 +1,27 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {NavLink, Route, Switch} from "react-router-dom";
 
-function App() {
+import Headerr from "./components/header/Headerr";
+import ClubPage from "./pages/ClubPage";
+import Footer from "./components/footer/Footer";
+import ProfilePage from "./pages/ProfilePage";
+import VideoPage from "./pages/VideoPage";
+
+const App = () => {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <>
+        <Headerr/>
+        <Switch>
+          <Route path="/" exact render={() => <ClubPage/>}/>
+          <Route path="/profile" exact render={()=><ProfilePage/>}/>
+          <Route path="/video/:name" render={(props)=><VideoPage {...props}/>}/>
+          <Route path="*"
+                 render={() => <div>Not found <NavLink style={{color: "blue"}} to="/">back to main</NavLink></div>}/>
+        </Switch>
+        <Footer/>
+      </>
   );
-}
+};
 
 export default App;

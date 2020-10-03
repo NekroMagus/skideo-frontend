@@ -1,0 +1,7 @@
+.padding {
+    padding-bottom: 30px;
+}
+
+.navbarSocial >  a:not(:last-child) {
+    margin-right: 20px;
+}
