@@ -35,49 +35,54 @@ const ClubPage = () => {
           <main className="club__main">
             {
               scouts && scouts.length !== 0 && scouts.map((el) => (
-                  <div className="club__player-card" key={el.id}>
-                    <header className="club__player-card-header">
-                      <div className="club__player-card-header-logo">
-                        <img width="80" height="90" src={scoutAvatar} alt="avatar"/>
-                      </div>
-                      <div className="club__player-card-header-user">
-                        <div className="club__player-card-header-user-name">
-                          {el.name || "Unknown"} {el.surname || "Unknown"}
+                  <>
+                  {
+                    el.video && el.name && el.surname &&
+                        <div className="club__player-card" key={el.id}>
+                          <header className="club__player-card-header">
+                            <div className="club__player-card-header-logo">
+                              <img width="80" height="90" src={scoutAvatar} alt="avatar"/>
+                            </div>
+                            <div className="club__player-card-header-user">
+                              <div className="club__player-card-header-user-name">
+                                {el.name || "Unknown"} {el.surname || "Unknown"}
+                              </div>
+                              <div className="club__player-card-header-user-birthday">
+                                Birth date: {el.dateOfBirth && <Moment format={"DD.MM.YYYY"}>{el.dateOfBirth}</Moment>}
+                              </div>
+                            </div>
+                            {
+                              el.video &&
+                              <div className="club__player-card-header-button">
+                                <NavLink to={"/video/" + el.video}>Посмотреть</NavLink>
+                              </div>
+                            }
+                          </header>
+                          <main className="club__player-card-main">
+                            <div className="club__player-card-main-left">
+                              <div>
+                                <p className="club__player-card-main-title">Position</p>
+                                <p className="club__player-card-main-text">{el.roleFootball}</p>
+                              </div>
+                              <div>
+                                <p className="club__player-card-main-title">Location</p>
+                                <p className="club__player-card-main-text">{el.city}</p>
+                              </div>
+                            </div>
+                            <div className="club__player-card-main-right">
+                              <div>
+                                <p className="club__player-card-main-title">Contacts</p>
+                                <p className="club__player-card-main-text">{el.telephoneNumber}</p>
+                              </div>
+                              <div>
+                                <p className="club__player-card-main-title">URL Video</p>
+                                <p className="club__player-card-main-text">{el.video}</p>
+                              </div>
+                            </div>
+                          </main>
                         </div>
-                        <div className="club__player-card-header-user-birthday">
-                          Birth date: {el.dateOfBirth && <Moment format={"DD.MM.YYYY"}>{el.dateOfBirth}</Moment>}
-                        </div>
-                      </div>
-                      {
-                        el.video &&
-                        <div className="club__player-card-header-button">
-                          <NavLink to={"/video/" + el.video}>Посмотреть</NavLink>
-                        </div>
-                      }
-                    </header>
-                    <main className="club__player-card-main">
-                      <div className="club__player-card-main-left">
-                        <div>
-                          <p className="club__player-card-main-title">Position</p>
-                          <p className="club__player-card-main-text">{el.roleFootball}</p>
-                        </div>
-                        <div>
-                          <p className="club__player-card-main-title">Location</p>
-                          <p className="club__player-card-main-text">{el.city}</p>
-                        </div>
-                      </div>
-                      <div className="club__player-card-main-right">
-                        <div>
-                          <p className="club__player-card-main-title">Contacts</p>
-                          <p className="club__player-card-main-text">{el.telephoneNumber}</p>
-                        </div>
-                        <div>
-                          <p className="club__player-card-main-title">URL Video</p>
-                          <p className="club__player-card-main-text">{el.video}</p>
-                        </div>
-                      </div>
-                    </main>
-                  </div>)
+                  }
+                  </>)
               )
             }
           </main>
