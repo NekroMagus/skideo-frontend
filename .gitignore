@@ -65,6 +65,7 @@ crashlytics-build.properties
 fabric.properties
 
 skideo_net
+node_modules
 
 # Editor-based Rest Client
 .idea/httpRequests
