@@ -1,56 +1,81 @@
-import FormControl from "../../../common/form-control/formControl";
-import {minLengthCreator, requiredField} from "../../../../utils/validator/Validator";
-import {Field, reduxForm} from "redux-form";
-import css from "../ModalAuth.module.css";
 import React from "react";
-import handleSubmit from "redux-form/lib/handleSubmit";
+import css from "../ModalAuth.module.css";
 import formLocalize from "../../../../store/localize/form";
+import {minLengthCreator, requiredField} from "../../../../utils/validator/Validator";
+import { Formik, Form, useField, } from "formik";
 
-const Input = FormControl('input');
 const minLength = minLengthCreator(6);
 
-const RegistrationForm = (props) => {
-    return (
-          <div className="modal-content">
-            <div className="text-center">
-              <h2>{formLocalize.registration}</h2>
-              <div className="push20"></div>
-            </div>
-            <form onSubmit={props.handleSubmit}>
-              <div className="input">
-                <div className="blockinput">
-                  <h4>{formLocalize.login}<span className="red f16">*</span></h4>
-                  {props.error && <div className={css.error}>{props.error}</div>}
-                  <Field
-                      className={css.tab}
-                      name={"login"}
-                      component={Input}
-                      placeholder={formLocalize.enterLogin}
-                      autoComplete={"off"}
-                      validate={[requiredField, minLength]}/>
-                </div>
-                <div className="push20"></div>
-                <div className="blockinput">
-                  <h4>{formLocalize.password}<span className="red f16">*</span></h4>
-                  <Field className={css.tab}
-                         name={"password"}
-                         component={Input}
-                         placeholder={formLocalize.enterPassword}
-                         type={"password"}
-                         validate={[requiredField, minLength]}/>
-                </div>
-              </div>
-              <small><span className="red f16">*</span> - {formLocalize.requiredFields}</small>
-              <div className="push20"></div>
-              <button className="btn btn-send">{formLocalize.registration}</button>
-
-              <div className="conditions">
-                <a href="#">{formLocalize.rulesAndPrivacy}</a>
-              </div>
-            </form>
+class RegistrationForm extends React.Component {
+  render() {
+    const TextInput = ({ label, ...props }) => {
+      // useField() returns [formik.getFieldProps(), formik.getFieldMeta()]
+      // which we can spread on <input>. We can use field meta to show an error
+      // message if the field is invalid and it has been touched (i.e. visited)
+      const [field, meta] = useField(props);
+      return (
+        <>
+          <div className="blockinput">
+              <label htmlFor={props.id || props.name}>{label}</label>
+              {/* className={css.tab} */}
+              <input className={css.tab} {...field} {...props} />
+              {meta.touched && meta.error ? (
+               <div className="error">{meta.error}</div>
+              ) : null}
           </div>
+        <div className="push20"></div>
+        </>
+      );
+    };
+
+    return (
+      <div>
+        <h2>{formLocalize.registration}</h2>
+        <Formik
+          initialValues={{
+            name: "",
+            placeholder: "",
+            autoComplete: "off"
+          }}
+          validate={[requiredField, minLength]}
+          onSubmit={(values, { setSubmitting }) => {
+            setTimeout(() => {
+              alert(JSON.stringify(values, null, 2));
+              setSubmitting(false);
+            }, 400);
+          }}
+        >
+          {(formik) => (
+            <Form onSubmit={formik.handleSubmit}>
+              <TextInput
+                label="Логин"
+                name="login"
+                placeholder={formLocalize.enterLogin}
+              />
+              <TextInput
+                label={formLocalize.password}
+                name="password"
+                placeholder={formLocalize.enterPassword}
+              />
+              <TextInput
+                label={formLocalize.submitPassword}
+                name="SubmitPassword"
+                placeholder={formLocalize.enterSubmitPassword}
+              />
+              <small>
+              <span className="red f16">*</span> - {formLocalize.requiredFields}
+              </small>
+              <button type="submit">{formLocalize.registration}</button>
+            </Form>
+          )}
+        </Formik>
+          <div className="push20"></div>
+          <div className="conditions">
+            <a href="#">{formLocalize.rulesAndPrivacy}</a>
+          </div>
+      </div>
     );
-};
+  }
+}
 
-export default reduxForm({form: "registration"})(RegistrationForm);
-
+export default RegistrationForm;
