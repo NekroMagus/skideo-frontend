@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 import css from './ModalAuth.module.css';
 import AuthForm from "./AuthForm/AuthForm";
-import RegistrationForm from "./RegistrationForm/RegistrationForm";
 import {login, registration} from "../../../store/reducers/authReducer";
 import {connect} from "react-redux";
+import RegistrationForm from "./RegistrationForm/RegistrationForm";
 
 class ModalAuth extends Component {
 

@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import Skideo2 from "../components/landing/skideo/Skideo2";
 import HeaderFirst from "../components/landing/header/HeaderFirst";
 import AuthForm from "../components/landing/modalAuth/AuthForm/AuthForm";
-import RegistrationForm from "../components/landing/modalAuth/RegistrationForm/RegistrationForm";
 import {connect} from "react-redux";
 import {login, registration} from "../store/reducers/authReducer";
 import Partners2 from "../components/landing/partners/Partners2";
@@ -11,6 +10,7 @@ import {withRouter} from "react-router-dom";
 import {compose} from "redux";
 import {toggleLang} from "../store/reducers/localizeReducer";
 import formLocalize from "../store/localize/form";
+import RegistrationForm from "../components/landing/modalAuth/RegistrationForm/RegistrationForm";
   
 class Land extends Component {
 
