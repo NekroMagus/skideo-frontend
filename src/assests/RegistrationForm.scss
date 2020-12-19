@@ -1,24 +1,51 @@
-.labelText {
-
+.alignCenter{
+  text-align: center;
+  margin-top: 5%;
 }
 
 .regHeader {
-  position: absolute;
-  width: 503px;
-  height: 66px;
-  left: 44px;
-  top: calc(50% - 66px/2 - 247px);
-
+  width: 100%;
   font-weight: bold;
-  font-size: 37px;
+  font-size: 20px;
   line-height: 50px;
   text-align: center;
 }
 .textInput{
-  background-color: #F8F7FC;
+  color: #7C7B7B;
+  margin-bottom: 5%;
+}
+
+input {
+  width: 100%;
+  height: 50px;
+  border: 0;
   border-radius: 10px;
+  padding-left: 10px;
+  background-color: #F8F7FC;
   font-size: 20px;
   line-height: 27px;
-  color: red;
-          //#7C7B7B;
+}
+
+.signButton{
+  width: 75%;
+  background: #FFFFFF;
+  border: 5px solid #9C9C9C;
+  box-sizing: border-box;
+  border-radius: 10px;
+  color: #9C9C9C;
+  font-size: 18px;
+  line-height: 35px;
+}
+
+.socialIcons{
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+
+  .facebook{
+
+  }
 }

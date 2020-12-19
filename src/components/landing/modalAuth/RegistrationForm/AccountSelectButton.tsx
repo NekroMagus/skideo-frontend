@@ -13,17 +13,25 @@ const AccountSelectButton = () => {
 
     return (
         <div className="accountSelectButtons">
-            <p>{formLocalize.whoAreYou}</p>
-            <button onClick={() => handleClick(userRole.PLAYER)}
-                    className={`accountButtons playerButton ${role === userRole.PLAYER ? "active" : ""}`}>
-                        {formLocalize.player}
-            </button>
-            <button onClick={() => handleClick(userRole.SCOUT)}
-                    className="accountButtons scoutButton">{formLocalize.scout}</button>
-            <button onClick={() => handleClick(userRole.CLUB)}
-                    className="accountButtons clubButton">{formLocalize.club}</button>
-            <button onClick={() => handleClick(userRole.ACADEMY)}
-                    className="accountButtons academiaButton">{formLocalize.academy}</button>
+            <label className="textInput" >{formLocalize.whoAreYou}</label>
+            <div className="buttonsRow">
+                <button onClick={() => handleClick(userRole.PLAYER)}
+                        className={`accountButtons playerButton ${role === userRole.PLAYER ? "active" : ""}`}>
+                            {formLocalize.player}
+                </button>
+                <button onClick={() => handleClick(userRole.SCOUT)}
+                        className={`accountButtons scoutButton ${role === userRole.SCOUT ? "active" : ""}`}>
+                            {formLocalize.scout}</button>
+            </div>
+            <div className="buttonsRow">
+                <button onClick={() => handleClick(userRole.CLUB)}
+                        className={`accountButtons clubButton ${role === userRole.CLUB ? "active" : ""}`}>
+                            {formLocalize.club}</button>
+                <button onClick={() => handleClick(userRole.ACADEMY)}
+                        className={`accountButtons academiaButton ${role === userRole.ACADEMY ? "active" : ""}`}>
+                            {formLocalize.academy}</button>
+
+            </div>
         </div>
     );
 

@@ -1,44 +1,52 @@
 .accountSelectButtons {
+  width:100%;
+
   .accountButtons {
     background-color: #FFFFFF;
-    box-sizing: border-box;
     border-radius: 5px;
-    border: 5px solid;
+    border: 4px solid;
     font-weight: bold;
-    font-size: 26px;
-    height: 60px;
+    font-size: 18px;
     line-height: 35px;
-    text-align: center;
-    width: 242px;
+    padding: 0;
+    width: 47%;
+    opacity: 0.8;
   }
-
-  .academiaButton {
-    border-color: #B44852;
-    left: 315px;
-    top: 432px;
-  }
-
-  .clubButton {
-    border-color: #CEC771;
-    left: 49px;
-    top: 432px;
+  .buttonsRow{
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 0;
+    width: 100%;
   }
 
   .playerButton {
     border-color: #88B789;
-    left: 49px;
-    top: 346px;
+    margin-right: 4%;
   }
-
+  .playerButton.active{
+    box-shadow: 0 0 10px  5px #88B789;
+  }
   .scoutButton {
-    border-color: #B54608;
-    left: 315px;
-    top: 346px;
+    border-color: #b54608;
+  }
+  .scoutButton.active{
+    box-shadow: 0 0 10px  5px #B54608;
+  }
+  .academiaButton {
+    border-color: #B44852;
+  }
+  .academiaButton.active{
+    box-shadow: 0 0 10px  5px #B44852;
+  }
+  .clubButton {
+    border-color: #CEC771;
+    margin-right: 4%;
+  }
+  .clubButton.active{
+    box-shadow: 0 0 10px 5px #CEC771;
   }
 
-  .active {
-    background-color: #1c94c4;
-  }
+
 }
 
 

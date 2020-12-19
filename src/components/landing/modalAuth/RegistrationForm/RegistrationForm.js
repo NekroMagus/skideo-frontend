@@ -1,5 +1,4 @@
 import React from "react";
-
 import {Form, Formik} from "formik";
 import formLocalize from '../../../../store/localize/form';
 import {minLengthCreator, requiredField} from "../../../../utils/validator/Validator";
@@ -16,7 +15,7 @@ const RegistrationForm = (props) => {
 
   return (
       <div>
-          <h3>{formLocalize.createRegistration}</h3>
+          <h3 className="regHeader">{formLocalize.createRegistration}</h3>
           <AccountSelectButton />
         <Formik
             initialValues={{
@@ -40,13 +39,15 @@ const RegistrationForm = (props) => {
                     label={formLocalize.submitPassword}
                     name="submitPassword"
                 />
-                <p>{formLocalize.registrationSocialMedia}</p>
-                <button type="submit">{formLocalize.submitRegistration}</button>
+                <div className="alignCenter">
+                    <label className="textInput">{formLocalize.registrationSocialMedia}</label>
+                <button className="signButton" type="submit">{formLocalize.submitRegistration}</button>
+                </div>
               </Form>
           )}
         </Formik>
         <div className="conditions">
-          <a href="#">{formLocalize.rulesAndPrivacy}</a>
+          <a href="#" className="textInput">{formLocalize.rulesAndPrivacy}</a>
         </div>
       </div>
   );
