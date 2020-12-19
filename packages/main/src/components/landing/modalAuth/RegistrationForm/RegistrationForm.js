@@ -4,11 +4,10 @@ import {Form, Formik} from "formik";
 import formLocalize from '../../../../store/localize/form';
 import {minLengthCreator, requiredField} from "../../../../utils/validator/Validator";
 import TextInput from "../../../common/form/TextInput";
-import AccountSelectButton from "./AccountSelectButton";
+
+const minLength = minLengthCreator(6);
 
 const RegistrationForm = (props) => {
-
-  const minLength = minLengthCreator(6);
 
   const handleSubmit = (values) => {
     alert(JSON.stringify(values, null, 2));
@@ -16,13 +15,12 @@ const RegistrationForm = (props) => {
 
   return (
       <div>
-          <h3>{formLocalize.createRegistration}</h3>
-          <AccountSelectButton />
+        <h2>{formLocalize.registration}</h2>
         <Formik
             initialValues={{
-                login: "",
-                password: "",
-                submitPassword: ""
+              login: "",
+              password: "",
+              submitPassword: ""
             }}
             onSubmit={handleSubmit}
         >
@@ -31,20 +29,26 @@ const RegistrationForm = (props) => {
                 <TextInput
                     label={formLocalize.login}
                     name="login"
+                    placeholder={formLocalize.enterLogin}
                 />
                 <TextInput
                     label={formLocalize.password}
                     name="password"
+                    placeholder={formLocalize.enterPassword}
                 />
                 <TextInput
                     label={formLocalize.submitPassword}
                     name="submitPassword"
+                    placeholder={formLocalize.enterSubmitPassword}
                 />
-                <p>{formLocalize.registrationSocialMedia}</p>
-                <button type="submit">{formLocalize.submitRegistration}</button>
+                <small>
+                  <span className="red f16">*</span> - {formLocalize.requiredFields}
+                </small>
+                <button type="submit">{formLocalize.registration}</button>
               </Form>
           )}
         </Formik>
+        <div className="push20"></div>
         <div className="conditions">
           <a href="#">{formLocalize.rulesAndPrivacy}</a>
         </div>

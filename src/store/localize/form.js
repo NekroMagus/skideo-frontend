@@ -2,8 +2,16 @@ import LocalizedStrings from 'react-localization';
 
 const formLocalize = new LocalizedStrings({
   en: {
+    whoAreYou: "Who are you",
+    academy: "Academy",
+    club:"Club",
+    player: "Player",
+    scout: "Scout",
     auth: "Sign In",
     registration: "Sign Up",
+    registrationSocialMedia: "Sign up with",
+    submitRegistration: "Submit",
+    createRegistration: "Create new account",
     login: "Login",
     password: "Password",
     enterLogin: "Enter login*",
@@ -18,8 +26,16 @@ const formLocalize = new LocalizedStrings({
     loginExists: "User with this login already exists"
   },
   ru: {
+    whoAreYou: "Кто вы",
+    academy: "Академия",
+    club:"Клуб",
+    player: "Футболист",
+    scout: "Скаут",
     auth: "Вход",
     registration: "Регистрация",
+    registrationSocialMedia: "Или войдите через соцсети",
+    submitRegistration: "Зарегистрироваться",
+    createRegistration: "Создать личный кабинет",
     login: "Логин",
     password: "Пароль",
     enterLogin: "Введите логин*",

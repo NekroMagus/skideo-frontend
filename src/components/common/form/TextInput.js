@@ -9,15 +9,15 @@ const TextInput = ({ label, ...props }) => {
   const [field, meta] = useField(props);
   return (
       <>
-        <div className="blockinput">
+        <div >
           <label htmlFor={props.id || props.name}>{label}</label>
           {/* className={css.tab} */}
-          <input className={css.tab} {...field} {...props} />
+          <input  {...field} {...props} />
           {meta.touched && meta.error ? (
               <div className="error">{meta.error}</div>
           ) : null}
         </div>
-        <div className="push20"></div>
+        <div ></div>
       </>
   );
 };

@@ -1,0 +1,45 @@
+.accountSelectButtons {
+  .accountButtons {
+    background-color: #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 5px solid;
+    font-weight: bold;
+    font-size: 26px;
+    height: 60px;
+    line-height: 35px;
+    text-align: center;
+    width: 242px;
+  }
+
+  .academiaButton {
+    border-color: #B44852;
+    left: 315px;
+    top: 432px;
+  }
+
+  .clubButton {
+    border-color: #CEC771;
+    left: 49px;
+    top: 432px;
+  }
+
+  .playerButton {
+    border-color: #88B789;
+    left: 49px;
+    top: 346px;
+  }
+
+  .scoutButton {
+    border-color: #B54608;
+    left: 315px;
+    top: 346px;
+  }
+
+  .active {
+    background-color: #1c94c4;
+  }
+}
+
+
+

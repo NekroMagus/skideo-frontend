@@ -46,13 +46,13 @@ class ModalAuth extends Component {
     }
 
     return (
-        <div className={css.authModalWindow}>
+        <div>
           <div className={css.modalInner}>
             <div className={css.flexToggle}>
               <button onClick={this.onChangeAuth} className={css.toggleButton}>Авторизация</button>
               <button onClick={this.onChangeRegistration} className={css.toggleButton}>Регистрация</button>
             </div>
-            <div className={css.inputsContainer}>
+            <div>
               {this.state.isSetAuth
                   ? <AuthForm onSubmit={this.onSubmitAuth}/>
                   : <RegistrationForm onSubmit={this.onSubmitRegistration}/>}

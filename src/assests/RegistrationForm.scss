@@ -1,0 +1,24 @@
+.labelText {
+
+}
+
+.regHeader {
+  position: absolute;
+  width: 503px;
+  height: 66px;
+  left: 44px;
+  top: calc(50% - 66px/2 - 247px);
+
+  font-weight: bold;
+  font-size: 37px;
+  line-height: 50px;
+  text-align: center;
+}
+.textInput{
+  background-color: #F8F7FC;
+  border-radius: 10px;
+  font-size: 20px;
+  line-height: 27px;
+  color: red;
+          //#7C7B7B;
+}
