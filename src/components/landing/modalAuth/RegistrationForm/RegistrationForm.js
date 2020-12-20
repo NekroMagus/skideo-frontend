@@ -4,7 +4,10 @@ import formLocalize from '../../../../store/localize/form';
 import {minLengthCreator, requiredField} from "../../../../utils/validator/Validator";
 import TextInput from "../../../common/form/TextInput";
 import AccountSelectButton from "./AccountSelectButton";
-
+import iconFacebook from "../../../../static/img/socialIcon/iconFacebook.svg";
+import iconVK from "../../../../static/img/socialIcon/iconVK.svg";
+import iconTwitter from "../../../../static/img/socialIcon/iconTwitter.svg";
+import iconGoogle from "../../../../static/img/socialIcon/iconGoogle.svg";
 
 const RegistrationForm = (props) => {
 
@@ -42,9 +45,12 @@ const RegistrationForm = (props) => {
                 />
                 <div className="alignCenter">
                     <label className="textInput">{formLocalize.registrationSocialMedia}</label>
-                    <div className="socialIcons">
-                    <a href="#" >< img src="../../../../../dmt/static/images/socialIcon/iconFacebook.svg" alt="Image of facebook icon" /></a>
-                </div>
+                    <div className="socialIconsRow">
+                        <a href="#" >< img src={iconVK} alt="Image of social icon" /></a>
+                        <a href="#" >< img src={iconFacebook} alt="Image of social icon" /></a>
+                        <a href="#" >< img src={iconTwitter} alt="Image of social icon" /></a>
+                        <a href="#" >< img src={iconGoogle} alt="Image of social icon" /></a>
+                    </div>
                 <button className="signButton" type="submit">{formLocalize.submitRegistration}</button>
                 </div>
               </Form>

@@ -1,51 +1,54 @@
-.alignCenter{
+.alignCenter {
   text-align: center;
-  margin-top: 5%;
+  width: 100%;
 }
 
 .regHeader {
   width: 100%;
-  font-weight: bold;
-  font-size: 20px;
-  line-height: 50px;
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 60px;
   text-align: center;
 }
-.textInput{
+
+.textInput {
   color: #7C7B7B;
-  margin-bottom: 5%;
+  margin-top: 5%;
+  font-weight: 300;
+  line-height: 40px;
 }
 
 input {
   width: 100%;
-  height: 50px;
+  height: 40px;
   border: 0;
   border-radius: 10px;
   padding-left: 10px;
   background-color: #F8F7FC;
-  font-size: 20px;
+  font-size: 15px;
   line-height: 27px;
 }
 
-.signButton{
-  width: 75%;
+.signButton {
+  width: 70%;
   background: #FFFFFF;
-  border: 5px solid #9C9C9C;
+  border: 3px solid #9C9C9C;
   box-sizing: border-box;
-  border-radius: 10px;
-  color: #9C9C9C;
-  font-size: 18px;
-  line-height: 35px;
+  border-radius: 6px;
+  color: #837A7A;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 50px;
 }
 
-.socialIcons{
-  padding: 20px;
-  font-size: 30px;
-  width: 50px;
-  text-align: center;
-  text-decoration: none;
-  border-radius: 50%;
 
-//  .facebook{
-//background-image: url('../dmt/static/images/socialcon/iconFacebook.svg');
-//  }
+.socialIconsRow {
+  border: 10px;
 }
+
+.socialIconsRow a {
+  display: inline-block;
+  padding: 6px;
+  width: 17%;
+}
+

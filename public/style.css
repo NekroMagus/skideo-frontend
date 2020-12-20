@@ -618,13 +618,10 @@ input[type=file] {
 }
 
 .conditions {
-  font-size: 14px;
+  font-size: 17px;
+  line-height: 33px;
   text-align: center;
   padding-top: 15px;
-}
-
-.conditions a {
-  color: blue;
 }
 
 .modal-overlay {
@@ -674,10 +671,10 @@ input[type=file] {
   margin: 0 auto;
   background-color: #fff;
   color: #000;
-  width: 35%;
+  width: 30%;
   max-width: 75rem;
   min-height: 20rem;
-  padding: 1rem;
+  padding: 2rem;
   /*border-radius: 3px;*/
   opacity: 0;
   overflow-y: auto;
@@ -700,7 +697,7 @@ input[type=file] {
   cursor: pointer;
   top: 5px;
   right: 15px;
-  opacity: 0;
+  opacity: 0.8;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   -webkit-transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1), -webkit-transform 0.6s cubic-bezier(0.55, 0, 0.1, 1);
@@ -873,7 +870,7 @@ input[type=file] {
 
 @media screen and (max-width: 992px) {
   .l-center {
-    margin-left: 100px !important;
+    margin-left: 15% !important;
   }
 
   .btn-register {
