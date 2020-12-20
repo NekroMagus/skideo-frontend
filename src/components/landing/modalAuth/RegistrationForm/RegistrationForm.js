@@ -5,6 +5,7 @@ import {minLengthCreator, requiredField} from "../../../../utils/validator/Valid
 import TextInput from "../../../common/form/TextInput";
 import AccountSelectButton from "./AccountSelectButton";
 
+
 const RegistrationForm = (props) => {
 
   const minLength = minLengthCreator(6);
@@ -41,6 +42,9 @@ const RegistrationForm = (props) => {
                 />
                 <div className="alignCenter">
                     <label className="textInput">{formLocalize.registrationSocialMedia}</label>
+                    <div className="socialIcons">
+                    <a href="#" >< img src="../../../../../dmt/static/images/socialIcon/iconFacebook.svg" alt="Image of facebook icon" /></a>
+                </div>
                 <button className="signButton" type="submit">{formLocalize.submitRegistration}</button>
                 </div>
               </Form>
