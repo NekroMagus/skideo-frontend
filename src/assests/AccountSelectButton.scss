@@ -1,5 +1,8 @@
 .accountSelectButtons {
   width:100%;
+  input .none {
+    display: none;
+  }
 
   .accountButtons {
     background-color: #FFFFFF;
@@ -34,10 +37,10 @@
   .scoutButton.active{
     box-shadow: 0 0 10px  5px #B54608;
   }
-  .academiaButton {
+  .academyButton {
     border-color: #B44852;
   }
-  .academiaButton.active{
+  .academyButton.active{
     box-shadow: 0 0 10px  5px #B44852;
   }
   .clubButton {
@@ -51,22 +54,22 @@
 
 }
 
-.playerButton.newButt{
-  border-color: #837A7A;
-  color: #837A7A;
-  width: 23%;
-}
-.agentInput{
-  width: 100%;
-  color: #837A7A;
-  display: inline-block;
-  input {
-    width: 8%;
-    height: auto;
-    margin: 0%;
-    padding: 0%;
-  }
-  label{
-  }
-}
+//.playerButton.newButt{
+//  border-color: #837A7A;
+//  color: #837A7A;
+//  width: 23%;
+//}
+//.agentInput{
+//  width: 100%;
+//  color: #837A7A;
+//  display: inline-block;
+//  input {
+//    width: 8%;
+//    height: auto;
+//    margin: 0%;
+//    padding: 0%;
+//  }
+//  label{
+//  }
+//}
 

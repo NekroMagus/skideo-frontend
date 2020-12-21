@@ -13,7 +13,6 @@ const AccountSelectButton = () => {
     const [professional, setProfessional] = useState(false);
     const [haveAgent, setHaveAgent] = useState(false);
 
-
     return (
         <div className="accountSelectButtons">
             <label className="textInput">{formLocalize.whoAreYou}</label>

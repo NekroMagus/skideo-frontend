@@ -4,6 +4,7 @@ import formLocalize from '../../../../store/localize/form';
 import {minLengthCreator, requiredField} from "../../../../utils/validator/Validator";
 import TextInput from "../../../common/form/TextInput";
 import AccountSelectButton from "./AccountSelectButton";
+import AccountButton from "./AccountButton";
 import iconFacebook from "../../../../static/img/socialIcon/iconFacebook.svg";
 import iconVK from "../../../../static/img/socialIcon/iconVK.svg";
 import iconTwitter from "../../../../static/img/socialIcon/iconTwitter.svg";
@@ -20,7 +21,7 @@ const RegistrationForm = (props) => {
   return (
       <div>
           <h3 className="regHeader">{formLocalize.createRegistration}</h3>
-          <AccountSelectButton />
+          {/*<AccountSelectButton />*/}
         <Formik
             initialValues={{
                 login: "",
@@ -31,6 +32,7 @@ const RegistrationForm = (props) => {
         >
           {(formik) => (
               <Form onSubmit={formik.handleSubmit}>
+                <AccountButton />
                 <TextInput
                     label={formLocalize.login}
                     name="login"
