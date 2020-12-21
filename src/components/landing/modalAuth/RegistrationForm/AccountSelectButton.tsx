@@ -6,12 +6,17 @@ const AccountSelectButton = () => {
 
     const [role, setRole] = useState(userRole.NONE);
 
-    function handleClick(newRole: userRole) {
+    const handleClick = (newRole: userRole) => {
         setRole(newRole);
+        if (role !== userRole.PLAYER ) {
+            setHasAgent(false);
+            setIsProfessional(false);
+        }
     }
 
-    const [professional, setProfessional] = useState(false);
-    const [haveAgent, setHaveAgent] = useState(false);
+    const [isProfessional, setIsProfessional] = useState(false);
+    const [hasAgent, setHasAgent] = useState(false);
+
 
     return (
         <div className="accountSelectButtons">
@@ -21,37 +26,43 @@ const AccountSelectButton = () => {
                         className={`accountButtons playerButton ${role === userRole.PLAYER ? "active" : ""}`}>
                     {formLocalize.player}
                 </button>
-                <button onClick={() => {
-                    handleClick(userRole.SCOUT);
-                    setProfessional(false)
-                }}
+                <button onClick={() => handleClick(userRole.SCOUT)}
                         className={`accountButtons scoutButton ${role === userRole.SCOUT ? "active" : ""}`}>
-                    {formLocalize.scout}</button>
-                {role === userRole.PLAYER ? <div>
-                    <button onClick={()=>{setProfessional(true)}}
-                        className="accountButtons playerButton newButt">
-                    Professional</button>
-                    <button onClick={()=>{setProfessional(false)}}
-                        className="accountButtons playerButton newButt">
-                    Amateur</button></div> : null}
-                {professional ? <div className="agentInput"><label>I have an agent</label>
-                    <input name="haveAgent" type="checkbox"
-                           onChange={()=>{setHaveAgent(!haveAgent) }}   ></input></div> : null}
+                    {formLocalize.scout}
+                </button>
+                {
+                    role === userRole.PLAYER &&
+                    <>
+                        <div>
+                            <button onClick={() => setIsProfessional(true)}
+                                    className="accountButtons playerButton newButt">
+                                Professional
+                            </button>
+                            <button onClick={() => setIsProfessional(false)}
+                                    className="accountButtons playerButton newButt">
+                                Amateur
+                            </button>
+                        </div>
+                        {
+                            isProfessional &&
+                            <div className="agentInput">
+                                <label>I have an agent</label>
+                                <input name="haveAgent" type="checkbox" onChange={() => setHasAgent(!hasAgent)}/>
+                            </div>
+                        }
+                    </>
+                }
+
             </div>
             <div className="buttonsRow">
-                <button onClick={() => {
-                    handleClick(userRole.CLUB);
-                    setProfessional(false)
-                }}
+                <button onClick={() => handleClick(userRole.CLUB)}
                         className={`accountButtons clubButton ${role === userRole.CLUB ? "active" : ""}`}>
-                    {formLocalize.club}</button>
-                <button onClick={() => {
-                    handleClick(userRole.ACADEMY);
-                    setProfessional(false)
-                }}
+                    {formLocalize.club}
+                </button>
+                <button onClick={() => handleClick(userRole.ACADEMY)}
                         className={`accountButtons academiaButton ${role === userRole.ACADEMY ? "active" : ""}`}>
-                    {formLocalize.academy}</button>
-
+                    {formLocalize.academy}
+                </button>
             </div>
         </div>
     );
