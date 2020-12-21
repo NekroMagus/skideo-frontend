@@ -2,6 +2,7 @@ enum userRole {
     PLAYER,
     SCOUT,
     CLUB,
-    ACADEMY
+    ACADEMY,
+    NONE
 }
 export default userRole;

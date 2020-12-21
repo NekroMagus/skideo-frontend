@@ -45,7 +45,7 @@ const RegistrationForm = (props) => {
                 />
                 <div className="alignCenter">
                     <label className="textInput">{formLocalize.registrationSocialMedia}</label>
-                    <div className="socialIconsRow">
+                    <div className="socialIconsRow" >
                         <a href="#" >< img src={iconVK} alt="Image of social icon" /></a>
                         <a href="#" >< img src={iconFacebook} alt="Image of social icon" /></a>
                         <a href="#" >< img src={iconTwitter} alt="Image of social icon" /></a>

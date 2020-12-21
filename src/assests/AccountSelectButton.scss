@@ -19,9 +19,11 @@
     width: 100%;
   }
 
+
   .playerButton {
     border-color: #88B789;
     margin-right: 4%;
+
   }
   .playerButton.active{
     box-shadow: 0 0 10px  5px #88B789;
@@ -49,5 +51,22 @@
 
 }
 
-
+.playerButton.newButt{
+  border-color: #837A7A;
+  color: #837A7A;
+  width: 23%;
+}
+.agentInput{
+  width: 100%;
+  color: #837A7A;
+  display: inline-block;
+  input {
+    width: 8%;
+    height: auto;
+    margin: 0%;
+    padding: 0%;
+  }
+  label{
+  }
+}
 

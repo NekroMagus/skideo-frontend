@@ -36,3 +36,5 @@ footer {
 header {
     background: #000;
 }
+
+button:focus {outline:0;}
