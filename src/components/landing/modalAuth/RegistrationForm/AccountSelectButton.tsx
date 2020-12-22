@@ -1,14 +1,19 @@
-import React, {useState} from "react";
+import React, {Dispatch, SetStateAction, useState} from "react";
 import formLocalize from '../../../../store/localize/form';
 import userRole from "../../../../utils/enum/userRole";
 
-const AccountSelectButton = () => {
+interface RoleProps {
+    isAuth: boolean,
+    role: userRole,
+    setRole: Dispatch<SetStateAction<userRole>>
+}
 
-    const [role, setRole] = useState(userRole.NONE);
+const AccountSelectButton = ({isAuth, role, setRole}: RoleProps) => {
+
 
     const handleClick = (newRole: userRole) => {
         setRole(newRole);
-        if (role !== userRole.PLAYER ) {
+        if (role !== userRole.PLAYER) {
             setHasAgent(false);
             setIsProfessional(false);
         }
@@ -17,8 +22,11 @@ const AccountSelectButton = () => {
     const [isProfessional, setIsProfessional] = useState(false);
     const [hasAgent, setHasAgent] = useState(false);
 
-
     return (
+        <>
+        <div className="text-center">
+            <h3 className="regHeader">{formLocalize.signIn}</h3>
+        </div>
         <div className="accountSelectButtons">
             <label className="textInput">{formLocalize.whoAreYou}</label>
             <div className="buttonsRow">
@@ -31,7 +39,7 @@ const AccountSelectButton = () => {
                     {formLocalize.scout}
                 </button>
                 {
-                    role === userRole.PLAYER &&
+                    role === userRole.PLAYER && !isAuth &&
                     <>
                         <div>
                             <button onClick={() => setIsProfessional(true)}
@@ -60,11 +68,12 @@ const AccountSelectButton = () => {
                     {formLocalize.club}
                 </button>
                 <button onClick={() => handleClick(userRole.ACADEMY)}
-                        className={`accountButtons academiaButton ${role === userRole.ACADEMY ? "active" : ""}`}>
+                        className={`accountButtons academyButton ${role === userRole.ACADEMY ? "active" : ""}`}>
                     {formLocalize.academy}
                 </button>
             </div>
         </div>
+            </>
     );
 
 }

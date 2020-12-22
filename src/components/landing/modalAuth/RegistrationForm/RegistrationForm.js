@@ -10,6 +10,8 @@ import iconVK from "../../../../static/img/socialIcon/iconVK.svg";
 import iconTwitter from "../../../../static/img/socialIcon/iconTwitter.svg";
 import iconGoogle from "../../../../static/img/socialIcon/iconGoogle.svg";
 
+
+
 const RegistrationForm = (props) => {
 
   const minLength = minLengthCreator(6);
@@ -21,7 +23,7 @@ const RegistrationForm = (props) => {
   return (
       <div>
           <h3 className="regHeader">{formLocalize.createRegistration}</h3>
-          {/*<AccountSelectButton />*/}
+         {/*<AccountSelectButton isAuth={false}/>*/}
         <Formik
             initialValues={{
                 login: "",
@@ -32,8 +34,7 @@ const RegistrationForm = (props) => {
         >
           {(formik) => (
               <Form onSubmit={formik.handleSubmit}>
-                <AccountButton />
-                <TextInput
+                  <TextInput
                     label={formLocalize.login}
                     name="login"
                 />

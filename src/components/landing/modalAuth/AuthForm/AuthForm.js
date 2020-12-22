@@ -12,10 +12,8 @@ const minLength = minLengthCreator(6);
 const AuthForm = (props) => {
     return (
         <div className="modal-content">
-            <div className="text-center">
-                <h3 className="regHeader">{formLocalize.signIn}</h3>
-            </div>
-            <AccountSelectButton />
+
+            {/*<AccountSelectButton isAuth={true}/>*/}
             <form onSubmit={props.handleSubmit}>
                 <div className="input">
                     <div className="blockinput">

@@ -4,6 +4,7 @@ import AuthForm from "./AuthForm/AuthForm";
 import {login, registration} from "../../../store/reducers/authReducer";
 import {connect} from "react-redux";
 import RegistrationForm from "./RegistrationForm/RegistrationForm";
+import ModalAuthFunction from "./ModalAuthFunction";
 
 class ModalAuth extends Component {
 
@@ -28,6 +29,8 @@ class ModalAuth extends Component {
     })
   };
 
+
+
   onSubmitAuth = (data) => {
     this.props.login(data.login, data.password);
   };
@@ -49,15 +52,21 @@ class ModalAuth extends Component {
         <div>
           <div className={css.modalInner}>
             <div className={css.flexToggle}>
-              <button onClick={this.onChangeAuth} className={css.toggleButton}>Авторизация</button>
-              <button onClick={this.onChangeRegistration} className={css.toggleButton}>Регистрация</button>
+              <button onClick={this.onChangeAuth} className={css.toggleButton}>
+                Авторизация
+              </button>
+              <button onClick={this.onChangeRegistration} className={css.toggleButton}>
+                Регистрация
+              </button>
             </div>
             <div>
-              {this.state.isSetAuth
+              {
+                this.state.isSetAuth
                   ? <AuthForm onSubmit={this.onSubmitAuth}/>
-                  : <RegistrationForm onSubmit={this.onSubmitRegistration}/>}
-              <button className={`${css.button} ${css.center}`}
-                      onClick={this.props.toggleModalAuth}>Закрыть
+                  : <RegistrationForm onSubmit={this.onSubmitRegistration}/>
+              }
+              <button className={`${css.button} ${css.center}`} onClick={this.props.toggleModalAuth}>
+                Закрыть
               </button>
             </div>
           </div>
@@ -70,4 +79,4 @@ const mapStateToProps = (state) => ({
   isAuth: state.auth.isAuth
 });
 
-export default connect(mapStateToProps, {login, registration})(ModalAuth);
+export default connect(mapStateToProps, {login, registration})(ModalAuthFunction);
