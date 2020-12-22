@@ -1,36 +1,80 @@
-.alignCenter {
+.formAuthReg{
+  line-height: 1;
   text-align: center;
   width: 100%;
+  h3 {
+    text-align: center;
+  }
+}
+.selectorAuthReg{
+  text-align: center;
+  margin-bottom: 6%;
+  input {
+    display: none;
+  }
+  //input:checked + label {
+  //  color: #000000;
+  //  border: 4px solid #F8F7FC;
+  //  background: #FFFFFF;
+  //  border-radius: 5px;
+  //}
+  label {
+
+  }
+
+  .signIn{
+    padding: 8px;
+    font-size: 25px;
+    background: white;
+    cursor: pointer;
+    border: 4px solid #F8F7FC;
+    border-radius: 5px;
+  }
+  .signIn.nonActive{
+    padding: 8px;
+    font-size: 25px;
+    background: #F8F7FC;
+  }
+
+  .signUp{
+    padding: 8px;
+    font-size: 25px;
+    background: #F8F7FC;
+    cursor: pointer;
+  }
+  .signUp.active{
+    background: white;
+    border: 4px solid #F8F7FC;
+    border-radius: 5px;
+  }
 }
 
 .regHeader {
   width: 100%;
   font-weight: 600;
-  font-size: 26px;
-  line-height: 60px;
+  font-size: 23px;
   text-align: center;
+  opacity: 0.8;
+  margin: 3% 0;
 }
 
 .textInput {
   color: #7C7B7B;
-  margin-top: 5%;
+  margin-top: 3%;
   font-weight: 300;
-  line-height: 40px;
+  text-align: left;
 }
+
 
 input {
   width: 100%;
   height: 40px;
   border: 0;
   border-radius: 10px;
-  padding-left: 10px;
   background-color: #F8F7FC;
   font-size: 15px;
   line-height: 27px;
-
-}
-input .none{
-  display: none;
+  margin: 1% 0;
 }
 
 .signButton {
@@ -45,14 +89,15 @@ input .none{
   line-height: 50px;
 }
 
-
 .socialIconsRow {
   border: 10px;
+  margin: 3%;
+
+  a {
+    display: inline-block;
+    padding: 6px;
+    width: 17%;
+  }
 }
 
-.socialIconsRow a {
-  display: inline-block;
-  padding: 6px;
-  width: 17%;
-}
 

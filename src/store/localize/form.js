@@ -8,11 +8,11 @@ const formLocalize = new LocalizedStrings({
     player: "Player",
     scout: "Scout",
     auth: "Sign In",
-
+    enterAccount:"Enter your account",
     registration: "Sign Up",
     registrationSocialMedia: "Sign up with",
     submitRegistration: "Submit",
-    createRegistration: "Registration",
+    createRegistration: "Create new account",
     login: "Login",
     signIn:"Login",
     password: "Password",
@@ -25,7 +25,10 @@ const formLocalize = new LocalizedStrings({
     isRequired: "Field is required",
     minLength: "Minimum count symbols is ",
     loginError: "Wrong login or password",
-    loginExists: "User with this login already exists"
+    loginExists: "User with this login already exists",
+    professional: "Professional",
+    hasAgent: "I have an agent",
+    amateur: "Amateur",
   },
   ru: {
     whoAreYou: "Кто вы",
@@ -38,7 +41,7 @@ const formLocalize = new LocalizedStrings({
     registrationSocialMedia: "Или войдите через соцсети",
     submitRegistration: "Зарегистрироваться",
     createRegistration: "Создать личный кабинет",
-    signIn:"Войти в личный кабинет",
+    enterAccount:"Войти в личный кабинет",
     login: "Логин",
     password: "Пароль",
     enterLogin: "Введите логин*",
@@ -50,7 +53,10 @@ const formLocalize = new LocalizedStrings({
     isRequired: "Поле обязательно",
     minLength: "Минимальное количество символов ",
     loginError: "Логин или пароль неверны",
-    loginExists: "Пользователь с таким логином уже существует"
+    loginExists: "Пользователь с таким логином уже существует",
+    professional: "Профессионал",
+    hasAgent: "У меня есть агент",
+    amateur: "Любитель",
   }
 });
 

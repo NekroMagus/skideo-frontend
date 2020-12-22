@@ -11,59 +11,67 @@ import iconTwitter from "../../../../static/img/socialIcon/iconTwitter.svg";
 import iconGoogle from "../../../../static/img/socialIcon/iconGoogle.svg";
 
 
-
 const RegistrationForm = (props) => {
 
-  const minLength = minLengthCreator(6);
+    const minLength = minLengthCreator(6);
 
-  const handleSubmit = (values) => {
-    alert(JSON.stringify(values, null, 2));
-  }
+    const handleSubmit = (values) => {
+        alert(JSON.stringify(values, null, 2));
+    }
+    console.log(props);
 
-  return (
-      <div>
-          <h3 className="regHeader">{formLocalize.createRegistration}</h3>
-         {/*<AccountSelectButton isAuth={false}/>*/}
-        <Formik
-            initialValues={{
-                login: "",
-                password: "",
-                submitPassword: ""
-            }}
-            onSubmit={handleSubmit}
-        >
-          {(formik) => (
-              <Form onSubmit={formik.handleSubmit}>
-                  <TextInput
-                    label={formLocalize.login}
-                    name="login"
-                />
-                <TextInput
-                    label={formLocalize.password}
-                    name="password"
-                />
-                <TextInput
-                    label={formLocalize.submitPassword}
-                    name="submitPassword"
-                />
-                <div className="alignCenter">
-                    <label className="textInput">{formLocalize.registrationSocialMedia}</label>
-                    <div className="socialIconsRow" >
-                        <a href="#" >< img src={iconVK} alt="Image of social icon" /></a>
-                        <a href="#" >< img src={iconFacebook} alt="Image of social icon" /></a>
-                        <a href="#" >< img src={iconTwitter} alt="Image of social icon" /></a>
-                        <a href="#" >< img src={iconGoogle} alt="Image of social icon" /></a>
-                    </div>
-                <button className="signButton" type="submit">{formLocalize.submitRegistration}</button>
-                </div>
-              </Form>
-          )}
-        </Formik>
-        <div className="conditions">
-          <a href="#" className="textInput">{formLocalize.rulesAndPrivacy}</a>
+    return (
+        <div>
+            <Formik
+                initialValues={{
+                    login: "",
+                    password: "",
+                    submitPassword: ""
+                }}
+                onSubmit={handleSubmit}
+            >
+                {(formik) => (
+                    <Form onSubmit={formik.handleSubmit}>
+                        <div className="formAuthReg">
+                            <TextInput
+                                label={formLocalize.login}
+                                name="login"
+                            />
+                            <TextInput
+                                label={formLocalize.password}
+                                name="password"
+                            />
+                            {
+                                props.isAuth ? <button className="signButton" type="submit">{formLocalize.auth}
+                                    </button>
+                                    : <div>
+                                        <TextInput
+                                            label={formLocalize.submitPassword}
+                                            name="submitPassword"
+                                        />
+                                        <h3 className="textInput">{formLocalize.registrationSocialMedia}</h3>
+                                        <div className="socialIconsRow ">
+                                            <a href="#">< img src={iconVK} alt="Image of social icon"/></a>
+                                            <a href="#">< img src={iconFacebook} alt="Image of social icon"/></a>
+                                            <a href="#">< img src={iconTwitter} alt="Image of social icon"/></a>
+                                            <a href="#">< img src={iconGoogle} alt="Image of social icon"/></a>
+                                        </div>
+                                        <button className="signButton" type="submit">{formLocalize.submitRegistration}
+                                        </button>
+                                        <div className="conditions">
+                                            <a href="#" className="textInput">{formLocalize.rulesAndPrivacy}</a>
+                                        </div>
+
+                                    </div>
+                            }
+                        </div>
+                    </Form>
+                )}
+            </Formik>
+
+
         </div>
-      </div>
-  );
+    );
 }
 
 export default RegistrationForm;

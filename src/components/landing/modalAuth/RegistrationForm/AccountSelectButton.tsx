@@ -16,17 +16,16 @@ const AccountSelectButton = ({isAuth, role, setRole}: RoleProps) => {
         if (role !== userRole.PLAYER) {
             setHasAgent(false);
             setIsProfessional(false);
+            setAmateur(false);
         }
     }
 
     const [isProfessional, setIsProfessional] = useState(false);
+    const [isAmateur, setAmateur] = useState(false);
     const [hasAgent, setHasAgent] = useState(false);
 
     return (
         <>
-        <div className="text-center">
-            <h3 className="regHeader">{formLocalize.signIn}</h3>
-        </div>
         <div className="accountSelectButtons">
             <label className="textInput">{formLocalize.whoAreYou}</label>
             <div className="buttonsRow">
@@ -43,18 +42,17 @@ const AccountSelectButton = ({isAuth, role, setRole}: RoleProps) => {
                     <>
                         <div>
                             <button onClick={() => setIsProfessional(true)}
-                                    className="accountButtons playerButton newButt">
-                                Professional
+                                    className={`newButt ${isProfessional ? "active" : ""}`}>{formLocalize.professional}
                             </button>
-                            <button onClick={() => setIsProfessional(false)}
-                                    className="accountButtons playerButton newButt">
-                                Amateur
+                            <button onClick={() => {setIsProfessional(false); setAmateur(true);}}
+                                    className={`newButt ${isAmateur ? "active" : ""}`}>
+                                {formLocalize.amateur}
                             </button>
                         </div>
                         {
                             isProfessional &&
                             <div className="agentInput">
-                                <label>I have an agent</label>
+                                <label>{formLocalize.hasAgent}</label>
                                 <input name="haveAgent" type="checkbox" onChange={() => setHasAgent(!hasAgent)}/>
                             </div>
                         }

@@ -1,9 +1,12 @@
 .accountSelectButtons {
   width:100%;
-  input .none {
-    display: none;
-  }
 
+  .buttonsRow{
+    display: inline-block;
+    margin-bottom: 10px;
+    padding: 0;
+    width: 100%;
+  }
   .accountButtons {
     background-color: #FFFFFF;
     border-radius: 5px;
@@ -13,15 +16,9 @@
     line-height: 35px;
     padding: 0;
     width: 47%;
-    opacity: 0.8;
+    opacity: 0.9;
+    color: #3B3737;
   }
-  .buttonsRow{
-    display: inline-block;
-    margin-bottom: 10px;
-    padding: 0;
-    width: 100%;
-  }
-
 
   .playerButton {
     border-color: #88B789;
@@ -50,26 +47,37 @@
   .clubButton.active{
     box-shadow: 0 0 10px 5px #CEC771;
   }
-
-
 }
 
-.playerButton.newButt{
-  border-color: #837A7A;
+.newButt {
+  background-color: #FFFFFF;
+  border-radius: 5px;
+  font-size: 18px;
+  opacity: 0.9;
+  border: 3px solid #837A7A;
   color: #837A7A;
-  width: 23%;
+  font-weight: 500;
+  //width: 23%;
+  width: auto;
+  line-height: inherit;
+  margin: 2% 2px 0 0;
+  padding: 1px 2px;
 }
-//.agentInput{
-//  width: 100%;
-//  color: #837A7A;
-//  display: inline-block;
-//  input {
-//    width: 8%;
-//    height: auto;
-//    margin: 0%;
-//    padding: 0%;
-//  }
-//  label{
-//  }
-//}
+
+.newButt.active {
+  box-shadow: 0 0 10px 5px #837A7A;
+}
+
+.agentInput{
+  width: 100%;
+  color: #837A7A;
+  display: inline-block;
+  margin: 2% 0;
+  input {
+    width: 8%;
+    height: auto;
+    margin: 0%;
+    padding: 0%;
+  }
+}
 
