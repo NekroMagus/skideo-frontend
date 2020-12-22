@@ -41,7 +41,10 @@ const AccountSelectButton = ({isAuth, role, setRole}: RoleProps) => {
                     role === userRole.PLAYER && !isAuth &&
                     <>
                         <div>
-                            <button onClick={() => setIsProfessional(true)}
+                            <button onClick={() => {
+                                setIsProfessional(true);
+                                setAmateur(false);
+                            }}
                                     className={`newButt ${isProfessional ? "active" : ""}`}>{formLocalize.professional}
                             </button>
                             <button onClick={() => {setIsProfessional(false); setAmateur(true);}}
