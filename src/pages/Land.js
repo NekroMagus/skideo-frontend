@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import Skideo2 from "../components/landing/skideo/Skideo2";
 import HeaderFirst from "../components/landing/header/HeaderFirst";
-import AuthForm from "../components/landing/modalAuth/AuthForm/AuthForm";
 import {connect} from "react-redux";
 import {login, registration} from "../store/reducers/authReducer";
 import Partners2 from "../components/landing/partners/Partners2";
@@ -9,10 +8,9 @@ import Dream2 from "../components/landing/dream/Dream2";
 import {withRouter} from "react-router-dom";
 import {compose} from "redux";
 import {toggleLang} from "../store/reducers/localizeReducer";
-import formLocalize from "../store/localize/form";
-import RegistrationForm from "../components/landing/modalAuth/RegistrationForm/RegistrationForm";
-import ModalAuthFunction from "../components/landing/modalAuth/ModalAuth";
-  
+import ModalAuthFunction from "../components/landing/modalAuth/ModalAuthFunction";
+
+
 class Land extends Component {
 
   constructor(props) {
@@ -80,9 +78,10 @@ class Land extends Component {
           <Partners2/>
           <Dream2/>
           {
-            this.props.isAuth ?
-                null : <ModalAuthFunction isModalOpen={this.state.isModalOpen} />
-
+            !this.props.isAuth &&
+            <ModalAuthFunction isModalOpen={this.state.isModalOpen}
+                               setIsModalOpen={this.onCloseModal}
+            />
           }
         </>
     );
