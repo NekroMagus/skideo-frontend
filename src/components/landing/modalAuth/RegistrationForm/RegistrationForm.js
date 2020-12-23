@@ -6,7 +6,6 @@ import iconFacebook from "../../../../static/img/socialIcon/iconFacebook.svg";
 import iconVK from "../../../../static/img/socialIcon/iconVK.svg";
 import iconTwitter from "../../../../static/img/socialIcon/iconTwitter.svg";
 import iconGoogle from "../../../../static/img/socialIcon/iconGoogle.svg";
-import PlayerRoleEnum from "../../../../utils/enum/PlayerRoleEnum";
 import registrationValidator from "../../../../utils/validator/registrationValidator";
 
 const RegistrationForm = (props) => {
@@ -22,6 +21,7 @@ const RegistrationForm = (props) => {
     } else if (props.role === 4) {
       alert("url: localhost:8003/auth");
     }
+    alert (" hasAgent: " + props.hasAgent + " PlayerRole: " + props.playerRole )
 
   }
 

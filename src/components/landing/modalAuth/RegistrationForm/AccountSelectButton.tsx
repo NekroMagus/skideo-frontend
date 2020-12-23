@@ -8,9 +8,13 @@ interface RoleProps {
   entry: EntryEnum,
   role: UserRoleEnum,
   setRole: Dispatch<SetStateAction<UserRoleEnum>>
+  playerRole: PlayerRoleEnum,
+  setPlayerRole: Function,
+  hasAgent: boolean,
+  setHasAgent: Function,
 }
 
-const AccountSelectButton = ({entry, role, setRole}: RoleProps) => {
+const AccountSelectButton = ({entry, role, setRole, hasAgent, setHasAgent, playerRole, setPlayerRole}: RoleProps) => {
 
   const handleClick = (newRole: UserRoleEnum) => {
     setRole(newRole);
@@ -20,8 +24,12 @@ const AccountSelectButton = ({entry, role, setRole}: RoleProps) => {
     }
   }
 
-  const [playerRole, setPlayerRole] = useState(PlayerRoleEnum.NONE);
-  const [hasAgent, setHasAgent] = useState(false);
+  const handleRole = (newRole: PlayerRoleEnum) => {
+    setPlayerRole(newRole);
+    if (playerRole !== PlayerRoleEnum.PROFESSIONAL) {
+      setHasAgent(false);
+    }
+  }
 
   return (
       <>
@@ -40,11 +48,11 @@ const AccountSelectButton = ({entry, role, setRole}: RoleProps) => {
               role === UserRoleEnum.PLAYER && entry === EntryEnum.REGISTRATION &&
               <>
                 <div>
-                  <button onClick={() => setPlayerRole(PlayerRoleEnum.PROFESSIONAL)}
+                  <button onClick={() => handleRole(PlayerRoleEnum.PROFESSIONAL)}
                           className={`newButt ${playerRole === PlayerRoleEnum.PROFESSIONAL ? "active" : ""}`}>
                     {formLocalize.professional}
                   </button>
-                  <button onClick={() => setPlayerRole(PlayerRoleEnum.AMATEUR)}
+                  <button onClick={() => handleRole(PlayerRoleEnum.AMATEUR)}
                           className={`newButt ${playerRole === PlayerRoleEnum.AMATEUR ? "active" : ""}`}>
                     {formLocalize.amateur}
                   </button>

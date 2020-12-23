@@ -6,6 +6,7 @@ import formLocalize from "../../../store/localize/form";
 import entryEnum from "../../../utils/enum/EntryEnum";
 import EntryEnum from "../../../utils/enum/EntryEnum";
 import AuthForm from "./AuthForm/AuthForm";
+import PlayerRoleEnum from "../../../utils/enum/PlayerRoleEnum";
 
 interface ModalAuthProps {
   isModalOpen: boolean,
@@ -16,6 +17,8 @@ const ModalAuthFunction = ({isModalOpen, setIsModalOpen}: ModalAuthProps) => {
 
   const [entry, setEntry] = useState(entryEnum.AUTH);
   const [role, setRole] = useState(UserRoleEnum.NONE);
+  const [playerRole, setPlayerRole] = useState(PlayerRoleEnum.NONE);
+  const [hasAgent, setHasAgent] = useState(false);
 
   const onCloseModal = () => {
 
@@ -69,6 +72,10 @@ const ModalAuthFunction = ({isModalOpen, setIsModalOpen}: ModalAuthProps) => {
                   <AccountSelectButton entry={entry}
                                        role={role}
                                        setRole={setRole}
+                                       playerRole={playerRole}
+                                       setPlayerRole={setPlayerRole}
+                                       hasAgent={hasAgent}
+                                       setHasAgent={setHasAgent}
                   />
                   <AuthForm onSubmit={onSubmitAuth}
                             entry={entry}
@@ -83,10 +90,16 @@ const ModalAuthFunction = ({isModalOpen, setIsModalOpen}: ModalAuthProps) => {
                   <AccountSelectButton entry={entry}
                                        role={role}
                                        setRole={setRole}
+                                       playerRole={playerRole}
+                                       setPlayerRole={setPlayerRole}
+                                       hasAgent={hasAgent}
+                                       setHasAgent={setHasAgent}
                   />
                   <RegistrationForm onSubmit={onSubmitRegistration}
                                     entry={entry}
                                     role={role}
+                                    playerRole={playerRole}
+                                    hasAgent={hasAgent}
                   />
                 </div>
               }
