@@ -13,7 +13,7 @@ const RegistrationForm = (props) => {
   const handleSubmit = (values) => {
     alert(JSON.stringify(values, null, 2));
     if (props.role === 1) {
-      alert("url: localhost:8000/auth");
+      alert("url: localhost:8000/auth" + " hasAgent: " + props.hasAgent);
     } else if (props.role === 2) {
       alert("url: localhost:8001/auth");
     } else if (props.role === 3) {
@@ -21,8 +21,6 @@ const RegistrationForm = (props) => {
     } else if (props.role === 4) {
       alert("url: localhost:8003/auth");
     }
-    alert (" hasAgent: " + props.hasAgent + " PlayerRole: " + props.playerRole )
-
   }
 
   return (
