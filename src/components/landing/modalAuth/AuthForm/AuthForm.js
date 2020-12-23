@@ -1,51 +1,70 @@
-import FormControl from "../../../common/form-control/formControl";
-import {minLengthCreator, requiredField} from "../../../../utils/validator/Validator";
-import {Field, reduxForm} from "redux-form";
-import css from "../ModalAuth.module.css";
 import React from "react";
-import formLocalize from "../../../../store/localize/form";
-import AccountSelectButton from "../RegistrationForm/AccountSelectButton";
-
-const Input = FormControl('input');
-const minLength = minLengthCreator(6);
+import {Form, Formik} from "formik";
+import formLocalize from '../../../../store/localize/form';
+import TextInput from "../../../common/form/TextInput";
+import iconFacebook from "../../../../static/img/socialIcon/iconFacebook.svg";
+import iconVK from "../../../../static/img/socialIcon/iconVK.svg";
+import iconTwitter from "../../../../static/img/socialIcon/iconTwitter.svg";
+import iconGoogle from "../../../../static/img/socialIcon/iconGoogle.svg";
+import EntryEnum from "../../../../utils/enum/EntryEnum";
+import authValidator from "../../../../utils/validator/authValidator";
 
 const AuthForm = (props) => {
-    return (
-        <div className="modal-content">
 
-            {/*<AccountSelectButton isAuth={true}/>*/}
-            <form onSubmit={props.handleSubmit}>
-                <div className="input">
-                    <div className="blockinput">
-                        <h4>{formLocalize.login}</h4>
-                        {props.error && <div className={css.error}>{props.error}</div>}
-                        <Field
-                            className="email"
-                            name={"login"}
-                            component={Input}
-                            autoComplete={"off"}
-                            validate={[requiredField, minLength]}/>
-                    </div>
-                    <div className="blockinput">
-                        <h4>{formLocalize.password}</h4>
-                        <Field className=""
-                               name={"password"}
-                               component={Input}
-                               type={"password"}
-                               validate={[requiredField, minLength]}/>
-                    </div>
-                </div>
-                <div className="alignCenter">
-                <button className="signButton" type="submit">{formLocalize.auth}</button>
-                </div>
-                {/*<div className="conditions">*/}
-                {/*  <a href="recovery.html">Напомнить пароль</a>*/}
-                {/*</div>*/}
-            </form>
-        </div>
+  const handleSubmit = (values) => {
+    alert(JSON.stringify((values), null, 2));
+    if (props.role === 1) {
+      alert("url: localhost:8000/auth");
+    } else if (props.role === 2) {
+      alert("url: localhost:8001/auth");
+    } else if (props.role === 3) {
+      alert("url: localhost:8002/auth");
+    } else if (props.role === 4) {
+      alert("url: localhost:8003/auth");
+    }
+  }
 
-    );
+  return (
+      <div>
+        <Formik
+            initialValues={{
+              login: "",
+              password: ""
+            }}
+            validate={authValidator}
+            onSubmit={handleSubmit}
+        >
+          {(formik) => (
+              <Form onSubmit={formik.handleSubmit}>
+                <div className="formAuthReg">
+                  <TextInput
+                      label={formLocalize.login}
+                      name="login"
+                  />
+                  <TextInput
+                      label={formLocalize.password}
+                      name="password"
+                      type="password"
+                  />
+                  <h3 className="textInput">{formLocalize.registrationSocialMedia}</h3>
+                  <div className="socialIconsRow ">
+                    <a href="#">< img src={iconVK} alt="Image of social icon"/></a>
+                    <a href="#">< img src={iconFacebook} alt="Image of social icon"/></a>
+                    <a href="#">< img src={iconTwitter} alt="Image of social icon"/></a>
+                    <a href="#">< img src={iconGoogle} alt="Image of social icon"/></a>
+                  </div>
+                  <button className="signButton" type="submit">{formLocalize.auth}
+                  </button>
+                  <div className="conditions">
+                    <a href="#" className="textInput">{formLocalize.rulesAndPrivacy}</a>
+                  </div>
+                </div>
+              </Form>
+          )}
+        </Formik>
+      </div>
+  );
 };
 
-export default reduxForm({form: "login"})(AuthForm);
+export default AuthForm;
 

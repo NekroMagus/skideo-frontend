@@ -1,81 +1,78 @@
 import React, {Dispatch, SetStateAction, useState} from "react";
 import formLocalize from '../../../../store/localize/form';
-import userRole from "../../../../utils/enum/userRole";
+import UserRoleEnum from "../../../../utils/enum/UserRoleEnum";
+import EntryEnum from "../../../../utils/enum/EntryEnum";
+import PlayerRoleEnum from "../../../../utils/enum/PlayerRoleEnum";
 
 interface RoleProps {
-    isAuth: boolean,
-    role: userRole,
-    setRole: Dispatch<SetStateAction<userRole>>
+  entry: EntryEnum,
+  role: UserRoleEnum,
+  setRole: Dispatch<SetStateAction<UserRoleEnum>>
 }
 
-const AccountSelectButton = ({isAuth, role, setRole}: RoleProps) => {
+const AccountSelectButton = ({entry, role, setRole}: RoleProps) => {
 
-
-    const handleClick = (newRole: userRole) => {
-        setRole(newRole);
-        if (role !== userRole.PLAYER) {
-            setHasAgent(false);
-            setIsProfessional(false);
-            setAmateur(false);
-        }
+  const handleClick = (newRole: UserRoleEnum) => {
+    setRole(newRole);
+    if (role !== UserRoleEnum.PLAYER) {
+      setHasAgent(false);
+      setPlayerRole(PlayerRoleEnum.NONE);
     }
+  }
 
-    const [isProfessional, setIsProfessional] = useState(false);
-    const [isAmateur, setAmateur] = useState(false);
-    const [hasAgent, setHasAgent] = useState(false);
+  const [playerRole, setPlayerRole] = useState(PlayerRoleEnum.NONE);
+  const [hasAgent, setHasAgent] = useState(false);
 
-    return (
-        <>
+  return (
+      <>
         <div className="accountSelectButtons">
-            <label className="textInput">{formLocalize.whoAreYou}</label>
-            <div className="buttonsRow">
-                <button onClick={() => handleClick(userRole.PLAYER)}
-                        className={`accountButtons playerButton ${role === userRole.PLAYER ? "active" : ""}`}>
-                    {formLocalize.player}
-                </button>
-                <button onClick={() => handleClick(userRole.SCOUT)}
-                        className={`accountButtons scoutButton ${role === userRole.SCOUT ? "active" : ""}`}>
-                    {formLocalize.scout}
-                </button>
+          <label className="textInput">{formLocalize.whoAreYou}</label>
+          <div className="buttonsRow">
+            <button onClick={() => handleClick(UserRoleEnum.PLAYER)}
+                    className={`accountButtons playerButton ${role === UserRoleEnum.PLAYER ? "active" : ""}`}>
+              {formLocalize.player}
+            </button>
+            <button onClick={() => handleClick(UserRoleEnum.SCOUT)}
+                    className={`accountButtons scoutButton ${role === UserRoleEnum.SCOUT ? "active" : ""}`}>
+              {formLocalize.scout}
+            </button>
+            {
+              role === UserRoleEnum.PLAYER && entry === EntryEnum.REGISTRATION &&
+              <>
+                <div>
+                  <button onClick={() => setPlayerRole(PlayerRoleEnum.PROFESSIONAL)}
+                          className={`newButt ${playerRole === PlayerRoleEnum.PROFESSIONAL ? "active" : ""}`}>
+                    {formLocalize.professional}
+                  </button>
+                  <button onClick={() => setPlayerRole(PlayerRoleEnum.AMATEUR)}
+                          className={`newButt ${playerRole === PlayerRoleEnum.AMATEUR ? "active" : ""}`}>
+                    {formLocalize.amateur}
+                  </button>
+                </div>
                 {
-                    role === userRole.PLAYER && !isAuth &&
-                    <>
-                        <div>
-                            <button onClick={() => {
-                                setIsProfessional(true);
-                                setAmateur(false);
-                            }}
-                                    className={`newButt ${isProfessional ? "active" : ""}`}>{formLocalize.professional}
-                            </button>
-                            <button onClick={() => {setIsProfessional(false); setAmateur(true);}}
-                                    className={`newButt ${isAmateur ? "active" : ""}`}>
-                                {formLocalize.amateur}
-                            </button>
-                        </div>
-                        {
-                            isProfessional &&
-                            <div className="agentInput">
-                                <label>{formLocalize.hasAgent}</label>
-                                <input name="haveAgent" type="checkbox" onChange={() => setHasAgent(!hasAgent)}/>
-                            </div>
-                        }
-                    </>
+                  playerRole === PlayerRoleEnum.PROFESSIONAL &&
+                  <div className="agentInput">
+                    <label>{formLocalize.hasAgent}</label>
+                    <input name="haveAgent" type="checkbox" onChange={() => setHasAgent(!hasAgent)}/>
+                  </div>
                 }
+              </>
+            }
 
-            </div>
-            <div className="buttonsRow">
-                <button onClick={() => handleClick(userRole.CLUB)}
-                        className={`accountButtons clubButton ${role === userRole.CLUB ? "active" : ""}`}>
-                    {formLocalize.club}
-                </button>
-                <button onClick={() => handleClick(userRole.ACADEMY)}
-                        className={`accountButtons academyButton ${role === userRole.ACADEMY ? "active" : ""}`}>
-                    {formLocalize.academy}
-                </button>
-            </div>
+          </div>
+          <div className="buttonsRow">
+            <button onClick={() => handleClick(UserRoleEnum.CLUB)}
+                    className={`accountButtons clubButton ${role === UserRoleEnum.CLUB ? "active" : ""}`}>
+              {formLocalize.club}
+            </button>
+            <button onClick={() => handleClick(UserRoleEnum.ACADEMY)}
+                    className={`accountButtons academyButton ${role === UserRoleEnum.ACADEMY ? "active" : ""}`}>
+              {formLocalize.academy}
+            </button>
+          </div>
         </div>
-            </>
-    );
+      </>
+  );
 
 }
 
