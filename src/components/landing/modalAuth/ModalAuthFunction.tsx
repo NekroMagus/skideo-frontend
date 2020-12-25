@@ -80,11 +80,14 @@ const ModalAuthFunction = ({isModalOpen, setIsModalOpen}: ModalAuthProps) => {
                                        isEnabled={isEnabled}
                                        setIsEnabled={setIsEnabled}
                   />
-                  <AuthForm onSubmit={onSubmitAuth}
-                            entry={entry}
-                            role={role}
-                            isEnabled={isEnabled}
-                  />
+                  {
+                    isEnabled && <AuthForm onSubmit={onSubmitAuth}
+                                           entry={entry}
+                                           role={role}
+                                           isEnabled={isEnabled}
+                    />
+                  }
+
                 </div>
               }
               {
@@ -101,13 +104,16 @@ const ModalAuthFunction = ({isModalOpen, setIsModalOpen}: ModalAuthProps) => {
                                        isEnabled={isEnabled}
                                        setIsEnabled={setIsEnabled}
                   />
-                  <RegistrationForm onSubmit={onSubmitRegistration}
-                                    entry={entry}
-                                    role={role}
-                                    playerRole={playerRole}
-                                    hasAgent={hasAgent}
-                                    isEnabled={isEnabled}
-                  />
+                  {
+                    isEnabled && <RegistrationForm onSubmit={onSubmitRegistration}
+                                                   entry={entry}
+                                                   role={role}
+                                                   playerRole={playerRole}
+                                                   hasAgent={hasAgent}
+                                                   isEnabled={isEnabled}
+                    />
+                  }
+
                 </div>
               }
             </div>

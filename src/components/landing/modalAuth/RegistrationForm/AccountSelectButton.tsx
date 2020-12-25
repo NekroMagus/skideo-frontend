@@ -90,10 +90,10 @@ const AccountSelectButton = ({
                     className={`accountButtons academyButton ${role === UserRoleEnum.ACADEMY ? "active" : ""}`}>
               {formLocalize.academy}
             </button>
-            {
-              !isEnabled && <div>{formLocalize.requiredSelect}</div>
+            {/*{*/}
+            {/*  !isEnabled && <div>{formLocalize.requiredSelect}</div>*/}
 
-            }
+            {/*}*/}
           </div>
         </div>
       </>
