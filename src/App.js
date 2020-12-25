@@ -3,9 +3,9 @@ import {Route, Switch, withRouter} from "react-router-dom";
 import {connect} from "react-redux";
 import {initializeApp} from "./store/reducers/appReducer";
 import Footer from "./components/common/footer/Footer";
-import Prof from "./pages/Prof";
-import ProfEdit from "./pages/ProfEdit";
-import Land from "./pages/Land";
+import Prof from "./pages/Profile";
+import ProfEdit from "./pages/ProfileEdit";
+import Land from "./pages/Landing";
 import ProfileVideo from "./pages/ProfileVideo";
 
 class App extends Component {

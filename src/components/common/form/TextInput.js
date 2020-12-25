@@ -1,6 +1,5 @@
 import React from 'react';
 import {useField} from "formik";
-import css from "../../landing/modalAuth/ModalAuth.module.css";
 
 const TextInput = ({ label, ...props }) => {
 

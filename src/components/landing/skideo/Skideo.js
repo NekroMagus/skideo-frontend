@@ -1,7 +1,6 @@
 import React, {Component} from "react";
 import css from './Skideo.module.css';
 import {connect} from "react-redux";
-import ModalAuth from "../modalAuth/ModalAuth";
 import ModalAuthFunction from "../modalAuth/ModalAuth";
 // import ModalVideo from "../modalVideo/ModalVideo";
 
