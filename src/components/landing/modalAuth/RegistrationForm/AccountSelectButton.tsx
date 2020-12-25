@@ -1,4 +1,4 @@
-import React, {Dispatch, SetStateAction, useState} from "react";
+import React, {Dispatch, SetStateAction} from "react";
 import formLocalize from '../../../../store/localize/form';
 import UserRoleEnum from "../../../../utils/enum/UserRoleEnum";
 import EntryEnum from "../../../../utils/enum/EntryEnum";
@@ -33,12 +33,15 @@ const AccountSelectButton = ({
     if (role !== UserRoleEnum.PLAYER) {
       setHasAgent(false);
       setPlayerRole(PlayerRoleEnum.NONE);
-      setIsEnabled(true);
+    }
+    if (entry === EntryEnum.REGISTRATION && role === UserRoleEnum.PLAYER && playerRole === PlayerRoleEnum.NONE ){
+      setIsEnabled(false);
     }
   }
 
   const handleRole = (newRole: PlayerRoleEnum) => {
     setPlayerRole(newRole);
+    setIsEnabled(true);
     if (playerRole !== PlayerRoleEnum.PROFESSIONAL) {
       setHasAgent(false);
     }
