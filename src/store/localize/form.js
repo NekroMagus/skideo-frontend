@@ -1,4 +1,5 @@
 import LocalizedStrings from 'react-localization';
+import React from "react";
 
 const formLocalize = new LocalizedStrings({
   en: {
@@ -22,6 +23,7 @@ const formLocalize = new LocalizedStrings({
     enterSubmitPassword: "Enter submit password*",
     passwordNotMatch: "Password does not match",
     requiredFields: "Required fields",
+    requiredSelect: "*Please, select an option",
     rulesAndPrivacy: "Rules and Privacy",
     isRequired: "*Field is required",
     minLength: "Minimum count symbols is ",
@@ -51,6 +53,7 @@ const formLocalize = new LocalizedStrings({
     enterSubmitPassword: "Подтвердите пароль*",
     passwordNotMatch: "Пароли не совпадают",
     requiredFields: "поля, обязательные для заполнения",
+    requiredSelect: "*Пожалуйста, выберите тип аккаунта",
     rulesAndPrivacy: "Правила и Конфиденциальность",
     isRequired: "*Поле обязательно",
     minLength: "Минимальное количество символов: ",

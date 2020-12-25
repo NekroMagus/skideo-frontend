@@ -19,6 +19,7 @@ const ModalAuthFunction = ({isModalOpen, setIsModalOpen}: ModalAuthProps) => {
   const [role, setRole] = useState(UserRoleEnum.NONE);
   const [playerRole, setPlayerRole] = useState(PlayerRoleEnum.NONE);
   const [hasAgent, setHasAgent] = useState(false);
+  const [isEnabled, setIsEnabled] = useState(false);
 
   const onCloseModal = () => {
 
@@ -76,10 +77,13 @@ const ModalAuthFunction = ({isModalOpen, setIsModalOpen}: ModalAuthProps) => {
                                        setPlayerRole={setPlayerRole}
                                        hasAgent={hasAgent}
                                        setHasAgent={setHasAgent}
+                                       isEnabled={isEnabled}
+                                       setIsEnabled={setIsEnabled}
                   />
                   <AuthForm onSubmit={onSubmitAuth}
                             entry={entry}
                             role={role}
+                            isEnabled={isEnabled}
                   />
                 </div>
               }
@@ -94,12 +98,15 @@ const ModalAuthFunction = ({isModalOpen, setIsModalOpen}: ModalAuthProps) => {
                                        setPlayerRole={setPlayerRole}
                                        hasAgent={hasAgent}
                                        setHasAgent={setHasAgent}
+                                       isEnabled={isEnabled}
+                                       setIsEnabled={setIsEnabled}
                   />
                   <RegistrationForm onSubmit={onSubmitRegistration}
                                     entry={entry}
                                     role={role}
                                     playerRole={playerRole}
                                     hasAgent={hasAgent}
+                                    isEnabled={isEnabled}
                   />
                 </div>
               }

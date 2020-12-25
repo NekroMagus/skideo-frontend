@@ -12,15 +12,28 @@ interface RoleProps {
   setPlayerRole: Function,
   hasAgent: boolean,
   setHasAgent: Function,
+  isEnabled: boolean,
+  setIsEnabled: Function,
 }
 
-const AccountSelectButton = ({entry, role, setRole, hasAgent, setHasAgent, playerRole, setPlayerRole}: RoleProps) => {
+const AccountSelectButton = ({
+                               entry,
+                               role,
+                               setRole,
+                               hasAgent,
+                               setHasAgent,
+                               playerRole,
+                               setPlayerRole,
+                               isEnabled,
+                               setIsEnabled
+                             }: RoleProps) => {
 
   const handleClick = (newRole: UserRoleEnum) => {
     setRole(newRole);
     if (role !== UserRoleEnum.PLAYER) {
       setHasAgent(false);
       setPlayerRole(PlayerRoleEnum.NONE);
+      setIsEnabled(true);
     }
   }
 
@@ -77,6 +90,10 @@ const AccountSelectButton = ({entry, role, setRole, hasAgent, setHasAgent, playe
                     className={`accountButtons academyButton ${role === UserRoleEnum.ACADEMY ? "active" : ""}`}>
               {formLocalize.academy}
             </button>
+            {
+              !isEnabled && <div>{formLocalize.requiredSelect}</div>
+
+            }
           </div>
         </div>
       </>

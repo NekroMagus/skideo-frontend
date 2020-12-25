@@ -60,7 +60,8 @@ const RegistrationForm = (props) => {
                       <a href="#">< img src={iconTwitter} alt="Image of social icon"/></a>
                       <a href="#">< img src={iconGoogle} alt="Image of social icon"/></a>
                     </div>
-                    <button className="signButton" type="submit">{formLocalize.submitRegistration}
+                    <button disabled={!props.isEnabled} className="signButton"
+                            type="submit">{formLocalize.submitRegistration}
                     </button>
                     <div className="conditions">
                       <a href="#" className="textInput">{formLocalize.rulesAndPrivacy}</a>
