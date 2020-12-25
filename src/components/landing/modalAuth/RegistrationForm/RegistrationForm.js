@@ -6,19 +6,20 @@ import iconFacebook from "../../../../static/img/socialIcon/iconFacebook.svg";
 import iconVK from "../../../../static/img/socialIcon/iconVK.svg";
 import iconTwitter from "../../../../static/img/socialIcon/iconTwitter.svg";
 import iconGoogle from "../../../../static/img/socialIcon/iconGoogle.svg";
+import UserRoleEnum from "../../../../utils/enum/PlayerRoleEnum";
 import registrationValidator from "../../../../utils/validator/registrationValidator";
 
 const RegistrationForm = (props) => {
 
   const handleSubmit = (values) => {
     alert(JSON.stringify(values, null, 2));
-    if (props.role === 1) {
+    if (props.role === UserRoleEnum.PLAYER) {
       alert("url: localhost:8000/auth" + " hasAgent: " + props.hasAgent + " playerRole " + props.playerRole);
-    } else if (props.role === 2) {
+    } else if (props.role === UserRoleEnum.SCOUT) {
       alert("url: localhost:8001/auth");
-    } else if (props.role === 3) {
+    } else if (props.role === UserRoleEnum.CLUB) {
       alert("url: localhost:8002/auth");
-    } else if (props.role === 4) {
+    } else if (props.role === UserRoleEnum.ACADEMY) {
       alert("url: localhost:8003/auth");
     }
   }
