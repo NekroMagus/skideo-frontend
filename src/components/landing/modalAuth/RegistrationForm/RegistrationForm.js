@@ -6,7 +6,7 @@ import iconFacebook from "../../../../static/img/socialIcon/iconFacebook.svg";
 import iconVK from "../../../../static/img/socialIcon/iconVK.svg";
 import iconTwitter from "../../../../static/img/socialIcon/iconTwitter.svg";
 import iconGoogle from "../../../../static/img/socialIcon/iconGoogle.svg";
-import UserRoleEnum from "../../../../utils/enum/PlayerRoleEnum";
+import UserRoleEnum from "../../../../utils/enum/UserRoleEnum";
 import registrationValidator from "../../../../utils/validator/registrationValidator";
 
 const RegistrationForm = (props) => {

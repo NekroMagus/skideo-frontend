@@ -8,18 +8,19 @@ import iconTwitter from "../../../../static/img/socialIcon/iconTwitter.svg";
 import iconGoogle from "../../../../static/img/socialIcon/iconGoogle.svg";
 import EntryEnum from "../../../../utils/enum/EntryEnum";
 import authValidator from "../../../../utils/validator/authValidator";
+import UserRoleEnum from "../../../../utils/enum/UserRoleEnum";
 
 const AuthForm = (props) => {
 
   const handleSubmit = (values) => {
     alert(JSON.stringify((values), null, 2));
-    if (props.role === 1) {
+    if (props.role === UserRoleEnum.PLAYER) {
       alert("url: localhost:8000/auth");
-    } else if (props.role === 2) {
+    } else if (props.role === UserRoleEnum.SCOUT) {
       alert("url: localhost:8001/auth");
-    } else if (props.role === 3) {
+    } else if (props.role === UserRoleEnum.CLUB) {
       alert("url: localhost:8002/auth");
-    } else if (props.role === 4) {
+    } else if (props.role === UserRoleEnum.ACADEMY) {
       alert("url: localhost:8003/auth");
     }
   }
